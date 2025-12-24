@@ -133,7 +133,7 @@ const posts = (await getCollection('blog')).sort(
         {
           posts.map((post) => (
             <article class="post-card">
-              <a href={`/blog/${post.id}/`}>
+              <a href={`/${post.id.replace('.md', '')}/`}>
                 {post.data.category && <span class="category-tag">{post.data.category}</span>}
                 <h3>{post.data.title}</h3>
                 <p class="date">

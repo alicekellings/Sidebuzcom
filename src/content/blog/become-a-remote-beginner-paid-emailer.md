@@ -1,5 +1,5 @@
 ---
-title: "<font color=#F6882D>Become a remote, beginner-paid emailer!</font>"
+title: "Become a remote, beginner-paid emailer!"
 description: "Have you ever written short email messages before?"
 pubDate: "2025-07-01"
 category: "Lifestyle"

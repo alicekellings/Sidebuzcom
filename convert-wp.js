@@ -51,7 +51,7 @@ function parseXML(xml) {
 
         if (title && content && postName) {
             posts.push({
-                title: title.replace(/&amp;/g, '&').replace(/&#8211;/g, '-').replace(/&#8217;/g, "'"),
+                title: cleanTitle(title),
                 content,
                 pubDate: pubDate ? new Date(pubDate) : new Date(),
                 slug: postName,
@@ -62,6 +62,30 @@ function parseXML(xml) {
     }
 
     return posts;
+}
+
+// Clean title - remove ALL HTML tags and entities
+function cleanTitle(title) {
+    let cleaned = title;
+
+    // Remove HTML tags like <span>, <font>, etc.
+    cleaned = cleaned.replace(/<[^>]+>/g, '');
+
+    // Decode HTML entities
+    cleaned = cleaned.replace(/&amp;/g, '&');
+    cleaned = cleaned.replace(/&#8211;/g, '-');
+    cleaned = cleaned.replace(/&#8217;/g, "'");
+    cleaned = cleaned.replace(/&#8220;/g, '"');
+    cleaned = cleaned.replace(/&#8221;/g, '"');
+    cleaned = cleaned.replace(/&nbsp;/g, ' ');
+    cleaned = cleaned.replace(/&lt;/g, '<');
+    cleaned = cleaned.replace(/&gt;/g, '>');
+    cleaned = cleaned.replace(/&quot;/g, '"');
+
+    // Clean up whitespace
+    cleaned = cleaned.replace(/\s+/g, ' ').trim();
+
+    return cleaned;
 }
 
 function extractCDATA(xml, tag) {
@@ -124,6 +148,7 @@ function htmlToMarkdown(html) {
     md = md.replace(/<figure[^>]*>[\s\S]*?<\/figure>/gi, '');
     md = md.replace(/<div[^>]*>([\s\S]*?)<\/div>/gi, '$1');
     md = md.replace(/<span[^>]*>([\s\S]*?)<\/span>/gi, '$1');
+    md = md.replace(/<font[^>]*>([\s\S]*?)<\/font>/gi, '$1');
     md = md.replace(/<[^>]+>/g, '');
 
     // Clean up HTML entities
@@ -173,10 +198,14 @@ function createMarkdownFile(post) {
     // Format date
     const dateStr = post.pubDate.toISOString().split('T')[0];
 
+    // Escape quotes in title and description
+    const safeTitle = post.title.replace(/"/g, '\\"');
+    const safeDescription = description.replace(/"/g, '\\"');
+
     // Create frontmatter
     const frontmatter = `---
-title: "${post.title.replace(/"/g, '\\"')}"
-description: "${description.replace(/"/g, '\\"')}"
+title: "${safeTitle}"
+description: "${safeDescription}"
 pubDate: "${dateStr}"
 ${post.category ? `category: "${post.category}"` : ''}
 ${post.tags.length > 0 ? `tags: [${post.tags.map(t => `"${t}"`).join(', ')}]` : ''}
@@ -194,6 +223,14 @@ async function main() {
     // Create output directory
     if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true });
+    } else {
+        // Clear existing posts
+        const files = fs.readdirSync(outputDir);
+        for (const file of files) {
+            if (file.endsWith('.md')) {
+                fs.unlinkSync(path.join(outputDir, file));
+            }
+        }
     }
 
     console.log('Reading WordPress XML...');
