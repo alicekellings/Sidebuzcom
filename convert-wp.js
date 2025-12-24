@@ -108,6 +108,24 @@ function htmlToMarkdown(html) {
     // Remove common WordPress/archive.org artifacts
     md = md.replace(/https?:\/\/web\.archive\.org\/web\/\d+(?:im_)?\/(?:https?:\/\/)?/g, 'https://');
 
+    // ===== REMOVE AFFILIATE/PROMOTIONAL LINKS =====
+    // Remove entire anchor tags with affiliate links (ClickBank, etc.)
+    md = md.replace(/<a[^>]*href="[^"]*(?:clickbank\.net|hop\.clickbank|affiliate|socialpaid|socialsrep|easywriter)[^"]*"[^>]*>[\s\S]*?<\/a>/gi, '');
+
+    // Remove markdown-style links with affiliate URLs
+    md = md.replace(/\*?\*?\[([^\]]*)\]\([^)]*(?:clickbank\.net|hop\.clickbank|affiliate|socialpaid|socialsrep|easywriter)[^)]*\)\*?\*?/gi, '');
+
+    // Remove lines that are primarily call-to-action for affiliate links
+    md = md.replace(/^.*(?:Click here to apply|Hit the link|Go to the link|Check out this page|Hit this link|apply now|application if interested).*$/gim, '');
+
+    // Remove sentences that start with "Interested?" and are followed by promotional content
+    md = md.replace(/Interested\?\s*(?:\*?\*?\[.*?\]\(.*?\)\*?\*?)?\s*before completing.*$/gim, '');
+
+    // Remove "Looking out for you" or "Best wishes" signatures at end
+    md = md.replace(/^(?:Looking out for you|Best wishes),?\s*$/gim, '');
+
+    // ===== END REMOVE AFFILIATE LINKS =====
+
     // Convert headers
     md = md.replace(/<h1[^>]*>([\s\S]*?)<\/h1>/gi, '\n# $1\n');
     md = md.replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, '\n## $1\n');

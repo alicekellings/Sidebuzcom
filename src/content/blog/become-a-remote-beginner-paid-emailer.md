@@ -12,12 +12,12 @@ We are currently looking for new beginner-paid remote workers who want to start 
 
 All employers hiring through our company are looking for people with no previous experience but are willing to learn. These are remote positions, meaning that as long as you can work the required hours, you can work from home.
 
-**[Click here to complete your application if interested.](https://hop.clickbank.net/?affiliate=niceecool&vendor=easywriter&pid=joblandingpage&ifso=writeemails320)**
+
 
 In this position, you will be assigned tasks related to sending promotional email messages about various products and services. You must write in clear English with no errors and provide consistency so we can rely on you to produce many weekly messages.
 
 The rate we offer varies depending on what kind of assignment(s) you'll take. Still, generally speaking, it ranges between $40-$80 per hour depending on what service(s) they entail and your level of expertise.
 
-Interested? **[Check out this page](https://hop.clickbank.net/?affiliate=niceecool&vendor=easywriter&pid=joblandingpage&ifso=writeemails320)** before completing an application to get everything important!
+
 
 Best of luck!

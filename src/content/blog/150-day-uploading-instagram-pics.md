@@ -12,7 +12,7 @@ All you have to do is upload pics to the company’s Instagram account and you c
 
 If you’re interested, you need to apply before the application deadline at midnight tonight.
 
-**[Hit the link below to apply now.](https://hop.clickbank.net/?affiliate=niceecool&vendor=socialpaid&pid=joblandingpage&ifso=uploadinstapics)**
+
 
 Some more details about this job:
 
@@ -22,7 +22,7 @@ Description: Download the pics they email you then upload them to their Instagra
 
 Pay: Up to $150/day.
 
-**[Go to the link below to apply now.](https://hop.clickbank.net/?affiliate=niceecool&vendor=socialpaid&pid=joblandingpage&ifso=uploadinstapics)**
+
 
 Location: Anywhere in the world, but especially people from your country.
 
@@ -33,7 +33,3 @@ Necessary Experience: None required, full training given.
 If you ever wanted to break into the social media online work world, this is your best bet.
 
 Most people have to intern for free for months, but you can start with this paid position right out of the gate.
-
-**[Click here to apply now.](https://hop.clickbank.net/?affiliate=niceecool&vendor=socialpaid&pid=joblandingpage&ifso=uploadinstapics)**
-
-Best wishes,
