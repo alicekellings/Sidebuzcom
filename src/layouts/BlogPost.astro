@@ -69,6 +69,15 @@ const { title, description, pubDate, updatedDate, heroImage, category, tags } =
         font-size: 0.85em;
         margin-right: 0.5em;
         margin-bottom: 0.5em;
+        text-decoration: none;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        cursor: pointer;
+      }
+      .category-tag:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
       }
       .tags {
         display: flex;
@@ -110,7 +119,16 @@ const { title, description, pubDate, updatedDate, heroImage, category, tags } =
               }
             </div>
             <h1>{title}</h1>
-            {category && <span class="category-tag">{category}</span>}
+            {
+              category && (
+                <a
+                  href={`/category/${category.toLowerCase().replace(/\s+/g, "-")}/`}
+                  class="category-tag"
+                >
+                  {category}
+                </a>
+              )
+            }
             {
               tags && tags.length > 0 && (
                 <div class="tags">

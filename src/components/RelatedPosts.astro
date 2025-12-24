@@ -1,0 +1,118 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+    currentSlug: string;
+    currentCategory?: string;
+    count?: number;
+}
+
+const { currentSlug, currentCategory, count = 3 } = Astro.props;
+
+// Get all posts except current
+const allPosts = await getCollection("blog");
+let relatedPosts = allPosts.filter(
+    (post) => post.id.replace(".md", "") !== currentSlug,
+);
+
+// Prefer posts from same category
+if (currentCategory) {
+    const sameCategoryPosts = relatedPosts.filter(
+        (post) => post.data.category === currentCategory,
+    );
+    const otherPosts = relatedPosts.filter(
+        (post) => post.data.category !== currentCategory,
+    );
+
+    // Shuffle both arrays
+    sameCategoryPosts.sort(() => Math.random() - 0.5);
+    otherPosts.sort(() => Math.random() - 0.5);
+
+    // Take from same category first, then fill with others
+    relatedPosts = [...sameCategoryPosts, ...otherPosts].slice(0, count);
+} else {
+    // Just shuffle and take random
+    relatedPosts.sort(() => Math.random() - 0.5);
+    relatedPosts = relatedPosts.slice(0, count);
+}
+---
+
+{
+    relatedPosts.length > 0 && (
+        <section class="related-posts">
+            <h2>📚 Related Articles</h2>
+            <div class="related-grid">
+                {relatedPosts.map((post) => (
+                    <a
+                        href={`/${post.id.replace(".md", "")}/`}
+                        class="related-card"
+                    >
+                        <h3>{post.data.title}</h3>
+                        <div class="related-meta">
+                            <FormattedDate date={post.data.pubDate} />
+                            {post.data.category && (
+                                <span class="related-category">
+                                    {post.data.category}
+                                </span>
+                            )}
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </section>
+    )
+}
+
+<style>
+    .related-posts {
+        margin-top: 3em;
+        padding-top: 2em;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .related-posts h2 {
+        color: #ffffff;
+        margin-bottom: 1em;
+        font-size: 1.5em;
+    }
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5em;
+    }
+    .related-card {
+        display: block;
+        padding: 1.2em;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        text-decoration: none;
+        transition:
+            transform 0.2s ease,
+            background 0.2s ease;
+    }
+    .related-card:hover {
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.08);
+    }
+    .related-card h3 {
+        color: #ffffff;
+        font-size: 1em;
+        margin: 0 0 0.5em;
+        line-height: 1.4;
+    }
+    .related-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .related-category {
+        background: linear-gradient(135deg, #e94560, #f39c12);
+        color: white;
+        padding: 0.15em 0.5em;
+        border-radius: 10px;
+        font-size: 0.85em;
+    }
+</style>

@@ -1,0 +1,145 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("blog");
+    const categories = [
+        ...new Set(allPosts.map((post) => post.data.category).filter(Boolean)),
+    ];
+
+    return categories.map((category) => ({
+        params: { category: category?.toLowerCase().replace(/\s+/g, "-") },
+        props: {
+            categoryName: category,
+            posts: allPosts
+                .filter((post) => post.data.category === category)
+                .sort(
+                    (a, b) =>
+                        b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+                ),
+        },
+    }));
+}
+
+const { categoryName, posts } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title={`${categoryName} | ${SITE_TITLE}`}
+            description={`Articles in ${categoryName} category`}
+        />
+        <style>
+            :root {
+                --accent: 229, 69, 96;
+                --accent-dark: 243, 156, 18;
+            }
+            body {
+                font-family: "Inter", system-ui, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+                min-height: 100vh;
+                color: #fff;
+            }
+            main {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 2em;
+            }
+            .category-header {
+                text-align: center;
+                margin-bottom: 2em;
+            }
+            h1 {
+                font-size: 2.5em;
+                margin-bottom: 0.5em;
+                color: #fff;
+            }
+            .category-badge {
+                display: inline-block;
+                background: linear-gradient(
+                    135deg,
+                    rgb(var(--accent)),
+                    rgb(var(--accent-dark))
+                );
+                color: white;
+                padding: 0.3em 1em;
+                border-radius: 20px;
+                font-size: 1.2em;
+            }
+            .post-count {
+                color: rgba(255, 255, 255, 0.7);
+                margin-top: 0.5em;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            li {
+                margin-bottom: 1.5em;
+            }
+            .post-item {
+                display: block;
+                padding: 1.5em;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                text-decoration: none;
+                color: inherit;
+                transition:
+                    transform 0.2s ease,
+                    background 0.2s ease;
+            }
+            .post-item:hover {
+                transform: translateX(5px);
+                background: rgba(255, 255, 255, 0.08);
+            }
+            .post-item h4 {
+                margin: 0 0 0.5em;
+                font-size: 1.2em;
+                color: #fff;
+            }
+            .post-item .date {
+                font-size: 0.85em;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <div class="category-header">
+                <h1>📂 Category</h1>
+                <span class="category-badge">{categoryName}</span>
+                <p class="post-count">{posts.length} articles</p>
+            </div>
+            <ul>
+                {
+                    posts.map((post) => (
+                        <li>
+                            <a
+                                href={`/${post.id.replace(".md", "")}/`}
+                                class="post-item"
+                            >
+                                <h4>{post.data.title}</h4>
+                                <p class="date">
+                                    <FormattedDate date={post.data.pubDate} />
+                                </p>
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </main>
+        <Footer />
+    </body>
+</html>

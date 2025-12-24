@@ -1,6 +1,13 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import { getCollection } from "astro:content";
+
+// Get all unique categories
+const allPosts = await getCollection("blog");
+const categories = [
+  ...new Set(allPosts.map((post) => post.data.category).filter(Boolean)),
+];
 ---
 
 <header>
@@ -9,16 +16,34 @@ import { SITE_TITLE } from '../consts';
     <div class="internal-links">
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
+      <div class="dropdown">
+        <span class="dropdown-trigger">Categories ▼</span>
+        <div class="dropdown-menu">
+          {
+            categories.map((category) => (
+              <a
+                href={`/category/${category?.toLowerCase().replace(/\s+/g, "-")}/`}
+              >
+                {category}
+              </a>
+            ))
+          }
+        </div>
+      </div>
       <HeaderLink href="/about">About</HeaderLink>
     </div>
   </nav>
 </header>
+
 <style>
   header {
     margin: 0;
     padding: 0 1em;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
   h2 {
     margin: 0;
@@ -48,7 +73,9 @@ import { SITE_TITLE } from '../consts';
     color: #fff;
     border-bottom: 2px solid transparent;
     text-decoration: none;
-    transition: color 0.3s, border-color 0.3s;
+    transition:
+      color 0.3s,
+      border-color 0.3s;
   }
   nav a.active {
     border-bottom-color: #e94560;
@@ -59,7 +86,48 @@ import { SITE_TITLE } from '../consts';
   }
   .internal-links {
     display: flex;
+    align-items: center;
     gap: 0.5em;
+  }
+
+  /* Dropdown styles */
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-trigger {
+    padding: 0.5em 1em;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .dropdown-trigger:hover {
+    color: #e94560;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1a1a2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    min-width: 180px;
+    padding: 0.5em 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu a {
+    display: block;
+    padding: 0.6em 1em;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: none;
+  }
+  .dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e94560;
   }
 
   @media (max-width: 720px) {
@@ -70,6 +138,14 @@ import { SITE_TITLE } from '../consts';
     .internal-links {
       flex-wrap: wrap;
       justify-content: center;
+    }
+    .dropdown-menu {
+      position: static;
+      display: none;
+      width: 100%;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
     }
   }
 </style>
