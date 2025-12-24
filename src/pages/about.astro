@@ -1,0 +1,121 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`About | ${SITE_TITLE}`} description="About SideBuzCom - Side Hustle Ideas for Students" />
+    <style>
+      :root {
+        --accent: 229, 69, 96;
+        --accent-dark: 243, 156, 18;
+      }
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        min-height: 100vh;
+        color: #fff;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 3em 2em;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        background: linear-gradient(90deg, #e94560, #f39c12);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      p {
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 1.2em;
+        font-size: 1.1em;
+      }
+      .highlight {
+        background: rgba(233, 69, 96, 0.1);
+        border-left: 4px solid #e94560;
+        padding: 1em 1.5em;
+        border-radius: 0 8px 8px 0;
+        margin: 2em 0;
+      }
+      .highlight h3 {
+        margin-top: 0;
+        color: #e94560;
+      }
+      .features {
+        display: grid;
+        gap: 1.5em;
+        margin-top: 2em;
+      }
+      .feature {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5em;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .feature h3 {
+        margin-top: 0;
+        color: #f39c12;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>🚀 About SideBuzCom</h1>
+      
+      <p>
+        Welcome to <strong>SideBuzCom</strong>! We're dedicated to helping students and aspiring entrepreneurs 
+        discover the best side hustle ideas to make extra money online.
+      </p>
+      
+      <p>
+        In today's digital age, there are countless opportunities to earn money from anywhere in the world. 
+        Whether you're a college student looking for flexible income, or someone wanting to break free from 
+        the traditional 9-to-5, we've got you covered.
+      </p>
+
+      <div class="highlight">
+        <h3>Our Mission</h3>
+        <p style="margin-bottom: 0;">
+          To provide actionable, proven strategies for building passive income streams and side hustles 
+          that can transform your financial future.
+        </p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <h3>💡 Proven Ideas</h3>
+          <p style="margin-bottom: 0;">
+            Every side hustle idea we share has been tested and proven to work. No fluff, just real strategies.
+          </p>
+        </div>
+        
+        <div class="feature">
+          <h3>📈 Passive Income</h3>
+          <p style="margin-bottom: 0;">
+            Learn how to build income streams that work for you 24/7, even while you sleep.
+          </p>
+        </div>
+        
+        <div class="feature">
+          <h3>🎓 Student-Friendly</h3>
+          <p style="margin-bottom: 0;">
+            All our content is tailored for students with limited time and budget.
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

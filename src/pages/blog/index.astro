@@ -1,0 +1,114 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+    <style>
+      :root {
+        --accent: 229, 69, 96;
+        --accent-dark: 243, 156, 18;
+        --gray: 96, 115, 159;
+        --gray-light: 229, 233, 240;
+        --gray-dark: 34, 41, 57;
+      }
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        min-height: 100vh;
+        color: #fff;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        background: linear-gradient(90deg, #e94560, #f39c12);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        margin-bottom: 1.5em;
+      }
+      .post-item {
+        display: block;
+        padding: 1.5em;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+      .post-item:hover {
+        transform: translateX(5px);
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .post-item h4 {
+        margin: 0 0 0.5em;
+        font-size: 1.2em;
+        color: #fff;
+      }
+      .post-item .date {
+        font-size: 0.85em;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .category-tag {
+        display: inline-block;
+        background: linear-gradient(135deg, rgb(var(--accent)), rgb(var(--accent-dark)));
+        color: white;
+        padding: 0.15em 0.5em;
+        border-radius: 12px;
+        font-size: 0.7em;
+        margin-left: 0.5em;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>📚 All Posts</h1>
+      <ul>
+        {
+          posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.id}/`} class="post-item">
+                <h4>
+                  {post.data.title}
+                  {post.data.category && <span class="category-tag">{post.data.category}</span>}
+                </h4>
+                <p class="date">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+    <Footer />
+  </body>
+</html>

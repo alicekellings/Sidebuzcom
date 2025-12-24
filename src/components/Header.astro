@@ -1,0 +1,75 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+  <nav>
+    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <div class="internal-links">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+    </div>
+  </nav>
+</header>
+<style>
+  header {
+    margin: 0;
+    padding: 0 1em;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+    background: linear-gradient(90deg, #e94560, #f39c12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em 0;
+  }
+  nav a {
+    padding: 0.5em 1em;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  nav a.active {
+    border-bottom-color: #e94560;
+    color: #e94560;
+  }
+  nav a:hover {
+    color: #e94560;
+  }
+  .internal-links {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  @media (max-width: 720px) {
+    nav {
+      flex-direction: column;
+      gap: 1em;
+    }
+    .internal-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>
