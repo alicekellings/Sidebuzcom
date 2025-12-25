@@ -328,6 +328,81 @@ export const incomeOptions = [
             'Requires capital',
             'Steep learning curve'
         ]
+    },
+    {
+        id: 'live-chat-jobs',
+        name: 'Live Chat Support',
+        description: 'Work from home as a live chat assistant helping customers.',
+        earnings: {
+            min: 25,
+            max: 35,
+            unit: 'hour'
+        },
+        monthlyPotential: '$500-$2,000',
+        timeCommitment: '10-25 hours/week',
+        difficulty: 'Easy',
+        tags: ['no-skills', 'customer-service', 'typing', 'flexible'],
+        platforms: ['livechatjobs'],
+        primaryAffiliate: 'livechatjobs',
+        pros: [
+            'No experience needed',
+            'Work from anywhere',
+            'Flexible schedule'
+        ],
+        cons: [
+            'Can be repetitive',
+            'Need good typing speed'
+        ]
+    },
+    {
+        id: 'app-reviews',
+        name: 'App Review Jobs',
+        description: 'Get paid to test and review mobile apps on your phone.',
+        earnings: {
+            min: 25,
+            max: 50,
+            unit: 'review'
+        },
+        monthlyPotential: '$200-$800',
+        timeCommitment: '5-10 hours/week',
+        difficulty: 'Easy',
+        tags: ['no-skills', 'mobile', 'easy', 'flexible', 'freshman', 'sophomore'],
+        platforms: ['writeappreviews'],
+        primaryAffiliate: 'writeappreviews',
+        pros: [
+            'Fun and easy',
+            'Use your phone',
+            'No experience needed'
+        ],
+        cons: [
+            'Limited availability',
+            'Lower income ceiling'
+        ]
+    },
+    {
+        id: 'dropshipping',
+        name: 'Dropshipping Business',
+        description: 'Start an online store without holding inventory.',
+        earnings: {
+            min: 500,
+            max: 3000,
+            unit: 'month'
+        },
+        monthlyPotential: '$500-$5,000+',
+        timeCommitment: '15-30 hours/week',
+        difficulty: 'Hard',
+        tags: ['business', 'entrepreneur', 'ecommerce', 'ambitious'],
+        platforms: ['salehoo', 'shopify'],
+        primaryAffiliate: 'salehoo',
+        pros: [
+            'No inventory needed',
+            'Low startup cost',
+            'Scalable business'
+        ],
+        cons: [
+            'Competitive market',
+            'Requires marketing skills'
+        ]
     }
 ];
 
