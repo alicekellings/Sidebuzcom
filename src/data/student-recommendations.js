@@ -251,6 +251,83 @@ export const incomeOptions = [
             'Need fluency in 2+ languages',
             'Deadlines can be tight'
         ]
+    },
+    {
+        id: 'video-editing',
+        name: 'Video Editing',
+        description: 'Edit videos for YouTubers, TikTokers, and businesses.',
+        earnings: {
+            min: 25,
+            max: 150,
+            unit: 'video'
+        },
+        monthlyPotential: '$500-$2,500',
+        timeCommitment: '10-20 hours/week',
+        difficulty: 'Medium',
+        tags: ['creative', 'arts', 'video', 'tech', 'design'],
+        platforms: ['fiverr', 'upwork'],
+        primaryAffiliate: 'fiverr',
+        tools: ['capcut', 'filmora'],
+        pros: [
+            'High demand from creators',
+            'Creative work',
+            'Can charge premium rates'
+        ],
+        cons: [
+            'Requires editing software',
+            'Learning curve for beginners'
+        ]
+    },
+    {
+        id: 'content-creator',
+        name: 'Content Creator (YouTube/TikTok)',
+        description: 'Create your own video content and earn from ads and sponsorships.',
+        earnings: {
+            min: 0,
+            max: 100,
+            unit: 'variable'
+        },
+        monthlyPotential: '$100-$5,000+',
+        timeCommitment: '10-25 hours/week',
+        difficulty: 'Hard',
+        tags: ['creative', 'arts', 'social', 'video', 'influencer'],
+        platforms: [],
+        primaryAffiliate: null,
+        tools: ['capcut', 'filmora'],
+        pros: [
+            'Build personal brand',
+            'Passive income potential',
+            'Fun creative work'
+        ],
+        cons: [
+            'Takes time to grow',
+            'Inconsistent income initially'
+        ]
+    },
+    {
+        id: 'ecommerce',
+        name: 'E-commerce Store',
+        description: 'Start your own online store selling products.',
+        earnings: {
+            min: 100,
+            max: 3000,
+            unit: 'month'
+        },
+        monthlyPotential: '$500-$5,000+',
+        timeCommitment: '15-30 hours/week',
+        difficulty: 'Hard',
+        tags: ['business', 'entrepreneur', 'marketing', 'ambitious'],
+        platforms: ['shopify'],
+        primaryAffiliate: 'shopify',
+        pros: [
+            'High income potential',
+            'Build real business',
+            'Scalable'
+        ],
+        cons: [
+            'Requires capital',
+            'Steep learning curve'
+        ]
     }
 ];
 

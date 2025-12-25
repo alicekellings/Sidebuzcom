@@ -97,7 +97,7 @@ export const affiliates = {
     shopify: {
         id: 'shopify',
         name: "Shopify",
-        url: "https://www.shopify.com/",
+        url: "https://shopify.pxf.io/Z62ZXW",
         cta: "Start Free Trial",
         earnings: "$1,000+/month potential",
         description: "Start your own online store",
@@ -125,6 +125,29 @@ export const affiliates = {
         description: "Start a blog or website",
         category: "business",
         logo: "/images/affiliates/bluehost.svg"
+    },
+
+    // Content Creation Tools
+    capcut: {
+        id: 'capcut',
+        name: "CapCut",
+        url: "https://capcutaffiliateprogram.pxf.io/gOY3EO",
+        cta: "Download Free",
+        earnings: "Free tool for video editing",
+        description: "Professional video editing for TikTok & YouTube",
+        category: "content",
+        logo: "/images/affiliates/capcut.svg"
+    },
+
+    filmora: {
+        id: 'filmora',
+        name: "Filmora",
+        url: "https://filmora.pxf.io/APrbmD",
+        cta: "Try Free",
+        earnings: "Video editing side hustle",
+        description: "Easy video editing software for beginners",
+        category: "content",
+        logo: "/images/affiliates/filmora.svg"
     }
 };
 
