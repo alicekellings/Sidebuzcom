@@ -439,15 +439,26 @@ import { affiliates } from "../data/affiliates.js";
                           )
                           .join("")}
                     </div>
-                    <a 
-                      href="${affiliate.url || "#"}" 
-                      target="_blank" 
-                      rel="noopener sponsored"
-                      class="affiliate-btn"
-                      data-affiliate="${rec.primaryAffiliate}"
-                    >
-                      ${affiliate.cta || "Get Started"} →
-                    </a>
+                    ${
+                        affiliate && affiliate.url
+                            ? `<a 
+                             href="${affiliate.url}" 
+                             target="_blank" 
+                             rel="noopener sponsored"
+                             class="affiliate-btn"
+                             data-affiliate="${rec.primaryAffiliate}"
+                             onclick="if(typeof trackAffiliateClick === 'function') trackAffiliateClick('${rec.primaryAffiliate}')"
+                           >
+                             ${affiliate.cta || "Get Started"} →
+                           </a>`
+                            : `<button 
+                             class="affiliate-btn btn-disabled" 
+                             disabled
+                             title="We're working on adding an affiliate partner for this opportunity"
+                           >
+                             Affiliate Link Coming Soon
+                           </button>`
+                    }
                   </div>
                 `;
                   })
@@ -871,6 +882,18 @@ import { affiliates } from "../data/affiliates.js";
     .affiliate-btn:hover {
         background: #d97706;
         transform: translateY(-1px);
+    }
+
+    .affiliate-btn.btn-disabled {
+        background: #9ca3af;
+        color: #fff;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+
+    .affiliate-btn.btn-disabled:hover {
+        background: #9ca3af;
+        transform: none;
     }
 
     /* Results Footer */
