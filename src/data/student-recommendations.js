@@ -165,8 +165,8 @@ export const incomeOptions = [
         timeCommitment: '8-15 hours/week',
         difficulty: 'Medium',
         tags: ['creative', 'marketing', 'business', 'social'],
-        platforms: [],
-        primaryAffiliate: null,
+        platforms: ['facebookjobs'],
+        primaryAffiliate: 'facebookjobs',
         pros: [
             'Fun creative work',
             'Retainer potential',
@@ -265,8 +265,8 @@ export const incomeOptions = [
         timeCommitment: '10-20 hours/week',
         difficulty: 'Medium',
         tags: ['creative', 'arts', 'video', 'tech', 'design'],
-        platforms: [],
-        primaryAffiliate: null,
+        platforms: ['instadoodle'],
+        primaryAffiliate: 'instadoodle',
         tools: ['capcut', 'filmora'],
         pros: [
             'High demand from creators',
@@ -291,8 +291,8 @@ export const incomeOptions = [
         timeCommitment: '10-25 hours/week',
         difficulty: 'Hard',
         tags: ['creative', 'arts', 'social', 'video', 'influencer'],
-        platforms: [],
-        primaryAffiliate: null,
+        platforms: ['instadoodle'],
+        primaryAffiliate: 'instadoodle',
         tools: ['capcut', 'filmora'],
         pros: [
             'Build personal brand',

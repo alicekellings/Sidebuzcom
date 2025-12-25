@@ -97,6 +97,28 @@ export const affiliates = {
         description: "Find wholesale suppliers and start dropshipping business",
         category: "business",
         logo: "/images/affiliates/salehoo.svg"
+    },
+
+    instadoodle: {
+        id: 'instadoodle',
+        name: "InstaDoodle",
+        url: "https://c489djq3h0rfqe4bvr79mat1qk.hop.clickbank.net/?&traffic_source=blog",
+        cta: "Create Videos",
+        earnings: "AI video creation tool",
+        description: "Create stunning whiteboard animation videos in 3 clicks with AI",
+        category: "content",
+        logo: "/images/affiliates/clickbank.svg"
+    },
+
+    facebookjobs: {
+        id: 'facebookjobs',
+        name: "Get Paid To Use Facebook",
+        url: "https://5c589fj8q3q8q6al-8q3whchfp.hop.clickbank.net/?&traffic_source=blog",
+        cta: "Start Earning",
+        earnings: "$15-30/hour",
+        description: "Get paid to manage Facebook, Twitter and YouTube accounts",
+        category: "jobs",
+        logo: "/images/affiliates/clickbank.svg"
     }
 };
 

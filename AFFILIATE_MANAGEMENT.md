@@ -22,8 +22,10 @@
 | App Reviews | `writeappreviews` | https://c6f537m9tbqhpid...hop.clickbank.net | 50-75% | 手机评测/简单任务 | ✅ 已配置 |
 | Virtual Assistant | `virtualassistant` | https://04b9efu1o1gcvc3...hop.clickbank.net | 50-75% | 虚拟助理 | ✅ 已配置 |
 | SaleHoo | `salehoo` | https://06e09fv0jcpn-c2...hop.clickbank.net | 50-75% | Dropshipping/电商 | ✅ 已配置 |
+| InstaDoodle | `instadoodle` | https://c489djq3h0rfqe4...hop.clickbank.net | ~50% | AI视频创作工具 | ✅ 已配置 |
+| Facebook Jobs | `facebookjobs` | https://5c589fj8q3q8q6a...hop.clickbank.net | ~50% | 社交媒体管理工作 | ✅ 已配置 |
 
-**总计**: 8个已配置联盟
+**总计**: 10个已配置联盟
 
 ---
 
