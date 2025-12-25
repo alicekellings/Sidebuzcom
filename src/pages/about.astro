@@ -1,121 +1,260 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={`About | ${SITE_TITLE}`} description="About SideBuzCom - Side Hustle Ideas for Students" />
-    <style>
-      :root {
-        --accent: 229, 69, 96;
-        --accent-dark: 243, 156, 18;
-      }
-      body {
-        font-family: 'Inter', system-ui, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-        min-height: 100vh;
-        color: #fff;
-      }
-      main {
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 3em 2em;
-      }
-      h1 {
-        font-size: 2.5em;
-        margin-bottom: 1em;
-        background: linear-gradient(90deg, #e94560, #f39c12);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      p {
-        line-height: 1.8;
-        color: rgba(255, 255, 255, 0.85);
-        margin-bottom: 1.2em;
-        font-size: 1.1em;
-      }
-      .highlight {
-        background: rgba(233, 69, 96, 0.1);
-        border-left: 4px solid #e94560;
-        padding: 1em 1.5em;
-        border-radius: 0 8px 8px 0;
-        margin: 2em 0;
-      }
-      .highlight h3 {
-        margin-top: 0;
-        color: #e94560;
-      }
-      .features {
-        display: grid;
-        gap: 1.5em;
-        margin-top: 2em;
-      }
-      .feature {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 1.5em;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .feature h3 {
-        margin-top: 0;
-        color: #f39c12;
-      }
-    </style>
+    <BaseHead
+      title={`About | ${SITE_TITLE}`}
+      description="Learn more about SideBuzCom and our mission to help students and freelancers achieve financial freedom."
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
     <Header />
+
     <main>
-      <h1>🚀 About SideBuzCom</h1>
-      
-      <p>
-        Welcome to <strong>SideBuzCom</strong>! We're dedicated to helping students and aspiring entrepreneurs 
-        discover the best side hustle ideas to make extra money online.
-      </p>
-      
-      <p>
-        In today's digital age, there are countless opportunities to earn money from anywhere in the world. 
-        Whether you're a college student looking for flexible income, or someone wanting to break free from 
-        the traditional 9-to-5, we've got you covered.
-      </p>
+      <section class="page-header">
+        <div class="container">
+          <h1>👋 About Us</h1>
+          <p>Helping you find your path to financial freedom</p>
+        </div>
+      </section>
 
-      <div class="highlight">
-        <h3>Our Mission</h3>
-        <p style="margin-bottom: 0;">
-          To provide actionable, proven strategies for building passive income streams and side hustles 
-          that can transform your financial future.
-        </p>
-      </div>
+      <section class="about-content">
+        <div class="container">
+          <div class="content-block">
+            <h2>Our Mission</h2>
+            <p>
+              At <strong>SideBuzCom</strong>, we believe everyone deserves the
+              opportunity to earn extra income and achieve financial
+              independence. Whether you're a student looking to make money while
+              studying, or someone seeking to start their own business, we're
+              here to help you find the best opportunities that match your
+              skills and goals.
+            </p>
+          </div>
 
-      <div class="features">
-        <div class="feature">
-          <h3>💡 Proven Ideas</h3>
-          <p style="margin-bottom: 0;">
-            Every side hustle idea we share has been tested and proven to work. No fluff, just real strategies.
-          </p>
+          <div class="content-block">
+            <h2>What We Offer</h2>
+            <div class="features-grid">
+              <div class="feature">
+                <div class="feature-icon">🔧</div>
+                <h3>Free Tools</h3>
+                <p>
+                  AI-powered tools to help you discover income opportunities
+                  tailored to your situation.
+                </p>
+              </div>
+              <div class="feature">
+                <div class="feature-icon">📚</div>
+                <h3>Expert Content</h3>
+                <p>
+                  In-depth articles on side hustles, passive income, and making
+                  money online.
+                </p>
+              </div>
+              <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Actionable Advice</h3>
+                <p>
+                  Step-by-step guides and action plans to help you get started
+                  quickly.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <h2>Our Values</h2>
+            <ul class="values-list">
+              <li>
+                <strong>Honest Recommendations:</strong> We only recommend platforms
+                and methods we believe in.
+              </li>
+              <li>
+                <strong>Practical Advice:</strong> No get-rich-quick schemes—just
+                proven strategies that work.
+              </li>
+              <li>
+                <strong>User-First Approach:</strong> Our tools and content are designed
+                with your success in mind.
+              </li>
+            </ul>
+          </div>
+
+          <div class="cta-box">
+            <h2>Ready to Get Started?</h2>
+            <p>
+              Try our free income finder tool and discover opportunities perfect
+              for you.
+            </p>
+            <a href="/tools/student-income-finder" class="btn btn-primary">
+              Find Your Income Path →
+            </a>
+          </div>
         </div>
-        
-        <div class="feature">
-          <h3>📈 Passive Income</h3>
-          <p style="margin-bottom: 0;">
-            Learn how to build income streams that work for you 24/7, even while you sleep.
-          </p>
-        </div>
-        
-        <div class="feature">
-          <h3>🎓 Student-Friendly</h3>
-          <p style="margin-bottom: 0;">
-            All our content is tailored for students with limited time and budget.
-          </p>
-        </div>
-      </div>
+      </section>
     </main>
+
     <Footer />
   </body>
 </html>
+
+<style>
+  .page-header {
+    background: var(--bg-secondary);
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .page-header .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  .page-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .about-content {
+    padding: 3rem 0;
+  }
+
+  .about-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .content-block {
+    margin-bottom: 3rem;
+  }
+
+  .content-block h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .content-block p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .feature {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  .feature p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .values-list li {
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .values-list strong {
+    color: var(--text-primary);
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, var(--accent-primary), #7c3aed);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    color: white;
+  }
+
+  .cta-box h2 {
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-box p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: white;
+    color: var(--accent-primary);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>

@@ -36,110 +36,150 @@ const { categoryName, posts } = Astro.props;
             title={`${categoryName} | ${SITE_TITLE}`}
             description={`Articles in ${categoryName} category`}
         />
-        <style>
-            :root {
-                --accent: 229, 69, 96;
-                --accent-dark: 243, 156, 18;
-            }
-            body {
-                font-family: "Inter", system-ui, sans-serif;
-                margin: 0;
-                padding: 0;
-                background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-                min-height: 100vh;
-                color: #fff;
-            }
-            main {
-                max-width: 960px;
-                margin: 0 auto;
-                padding: 2em;
-            }
-            .category-header {
-                text-align: center;
-                margin-bottom: 2em;
-            }
-            h1 {
-                font-size: 2.5em;
-                margin-bottom: 0.5em;
-                color: #fff;
-            }
-            .category-badge {
-                display: inline-block;
-                background: linear-gradient(
-                    135deg,
-                    rgb(var(--accent)),
-                    rgb(var(--accent-dark))
-                );
-                color: white;
-                padding: 0.3em 1em;
-                border-radius: 20px;
-                font-size: 1.2em;
-            }
-            .post-count {
-                color: rgba(255, 255, 255, 0.7);
-                margin-top: 0.5em;
-            }
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-            li {
-                margin-bottom: 1.5em;
-            }
-            .post-item {
-                display: block;
-                padding: 1.5em;
-                background: rgba(255, 255, 255, 0.05);
-                border-radius: 12px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                text-decoration: none;
-                color: inherit;
-                transition:
-                    transform 0.2s ease,
-                    background 0.2s ease;
-            }
-            .post-item:hover {
-                transform: translateX(5px);
-                background: rgba(255, 255, 255, 0.08);
-            }
-            .post-item h4 {
-                margin: 0 0 0.5em;
-                font-size: 1.2em;
-                color: #fff;
-            }
-            .post-item .date {
-                font-size: 0.85em;
-                color: rgba(255, 255, 255, 0.6);
-            }
-        </style>
+        <link rel="stylesheet" href="/src/styles/global.css" />
     </head>
     <body>
         <Header />
+
         <main>
-            <div class="category-header">
-                <h1>📂 Category</h1>
-                <span class="category-badge">{categoryName}</span>
-                <p class="post-count">{posts.length} articles</p>
-            </div>
-            <ul>
-                {
-                    posts.map((post) => (
-                        <li>
-                            <a
-                                href={`/${post.id.replace(".md", "")}/`}
-                                class="post-item"
-                            >
-                                <h4>{post.data.title}</h4>
-                                <p class="date">
-                                    <FormattedDate date={post.data.pubDate} />
-                                </p>
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
+            <section class="page-header">
+                <div class="container">
+                    <span class="category-badge">{categoryName}</span>
+                    <h1>📂 {categoryName}</h1>
+                    <p>{posts.length} articles in this category</p>
+                </div>
+            </section>
+
+            <section class="posts-section">
+                <div class="container">
+                    <ul class="posts-list">
+                        {
+                            posts.map((post) => (
+                                <li class="post-item">
+                                    <a href={`/${post.id.replace(".md", "")}/`}>
+                                        <article>
+                                            <span class="post-date">
+                                                <FormattedDate
+                                                    date={post.data.pubDate}
+                                                />
+                                            </span>
+                                            <h2 class="post-title">
+                                                {post.data.title}
+                                            </h2>
+                                        </article>
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </section>
         </main>
+
         <Footer />
     </body>
 </html>
+
+<style>
+    .page-header {
+        background: var(--bg-secondary);
+        padding: 3rem 0;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .page-header .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .category-badge {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        background: #dbeafe;
+        color: #1e40af;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+    }
+
+    .page-header p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .posts-section {
+        padding: 3rem 0;
+    }
+
+    .posts-section .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .posts-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .post-item {
+        border-bottom: 1px solid var(--border-color);
+        padding: 1.25rem 0;
+    }
+
+    .post-item:last-child {
+        border-bottom: none;
+    }
+
+    .post-item a {
+        text-decoration: none;
+        display: block;
+    }
+
+    .post-item:hover {
+        background: var(--bg-secondary);
+        margin: 0 -1rem;
+        padding: 1.25rem 1rem;
+        border-radius: 8px;
+    }
+
+    .post-date {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .post-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .post-item:hover .post-title {
+        color: var(--accent-primary);
+    }
+
+    @media (max-width: 600px) {
+        .page-header h1 {
+            font-size: 2rem;
+        }
+
+        .post-title {
+            font-size: 1.1rem;
+        }
+    }
+</style>

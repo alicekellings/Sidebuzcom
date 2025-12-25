@@ -1,0 +1,214 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title={`Affiliate Disclosure | ${SITE_TITLE}`}
+            description="Affiliate Disclosure for SideBuzCom. Learn about our affiliate relationships and how we earn commissions."
+        />
+        <link rel="stylesheet" href="/src/styles/global.css" />
+    </head>
+    <body>
+        <Header />
+
+        <main>
+            <section class="legal-page">
+                <div class="container">
+                    <h1>Affiliate Disclosure</h1>
+                    <p class="last-updated">Last Updated: December 25, 2024</p>
+
+                    <div class="legal-content">
+                        <div class="disclosure-box">
+                            <h2>⚠️ Important Notice</h2>
+                            <p>
+                                <strong
+                                    >SideBuzCom is a participant in various
+                                    affiliate programs.</strong
+                                > This means we may earn a commission when you click
+                                on links to products or services and make a purchase,
+                                at no additional cost to you.
+                            </p>
+                        </div>
+
+                        <h2>What Are Affiliate Links?</h2>
+                        <p>
+                            Affiliate links are special URLs that track when you
+                            click through to a partner website. If you make a
+                            purchase or sign up for a service through these
+                            links, we may receive a small commission.
+                        </p>
+
+                        <h2>How We Use Affiliate Links</h2>
+                        <p>We include affiliate links in:</p>
+                        <ul>
+                            <li>Our income finder tools (recommendations)</li>
+                            <li>Blog posts and articles</li>
+                            <li>Resource pages</li>
+                        </ul>
+                        <p>
+                            These commissions help us maintain and improve our
+                            website and continue providing free tools and
+                            content to help you earn money.
+                        </p>
+
+                        <h2>Our Affiliate Partners</h2>
+                        <p>
+                            We work with various affiliate partners, including
+                            but not limited to:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Chegg</strong> - Online tutoring platform
+                            </li>
+                            <li>
+                                <strong>Course Hero</strong> - Study resources and
+                                tutoring
+                            </li>
+                            <li>
+                                <strong>Fiverr</strong> - Freelance services marketplace
+                            </li>
+                            <li>
+                                <strong>Upwork</strong> - Freelance work platform
+                            </li>
+                            <li>
+                                <strong>Shopify</strong> - E-commerce platform
+                            </li>
+                            <li>
+                                <strong>Teachable</strong> - Online course platform
+                            </li>
+                        </ul>
+
+                        <h2>Our Commitment to You</h2>
+                        <p>
+                            <strong
+                                >We only recommend products and services that we
+                                genuinely believe can help you.</strong
+                            >
+                            Our recommendations are based on:
+                        </p>
+                        <ul>
+                            <li>Product quality and reputation</li>
+                            <li>User reviews and feedback</li>
+                            <li>Relevance to your goals</li>
+                            <li>Our own research and experience</li>
+                        </ul>
+                        <p>
+                            We will never recommend a product solely because it
+                            offers a higher commission. Your trust is more
+                            important to us than any affiliate earnings.
+                        </p>
+
+                        <h2>Identifying Affiliate Links</h2>
+                        <p>
+                            Affiliate links on our website are typically marked
+                            with buttons like "Get Started," "Sign Up," or
+                            "Learn More." When you see these action buttons in
+                            our tool results or articles, they may be affiliate
+                            links.
+                        </p>
+
+                        <h2>No Extra Cost to You</h2>
+                        <p>
+                            <strong
+                                >Using our affiliate links does not cost you
+                                anything extra.</strong
+                            >
+                            The price you pay is the same whether you use our link
+                            or go directly to the website. In some cases, we may be
+                            able to offer exclusive discounts.
+                        </p>
+
+                        <h2>Questions?</h2>
+                        <p>
+                            If you have any questions about our affiliate
+                            relationships or this disclosure, please contact us
+                            through our <a href="/about">About page</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <Footer />
+    </body>
+</html>
+
+<style>
+    .legal-page {
+        padding: 3rem 0;
+    }
+
+    .legal-page .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .legal-page h1 {
+        font-size: 2.5rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .disclosure-box {
+        background: #fef3c7;
+        border: 1px solid #f59e0b;
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .disclosure-box h2 {
+        color: #92400e;
+        margin: 0 0 0.75rem;
+        font-size: 1.25rem;
+    }
+
+    .disclosure-box p {
+        color: #78350f;
+        margin: 0;
+        line-height: 1.7;
+    }
+
+    .legal-content h2 {
+        font-size: 1.35rem;
+        color: var(--text-primary);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .legal-content p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+    }
+
+    .legal-content ul {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .legal-content li {
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+
+    .legal-content a {
+        color: var(--accent-primary);
+    }
+</style>

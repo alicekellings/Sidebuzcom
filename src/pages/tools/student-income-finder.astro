@@ -1,0 +1,912 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import {
+    quizQuestions,
+    incomeOptions,
+    matchRecommendations,
+    calculateIncome,
+} from "../../data/student-recommendations.js";
+import { affiliates } from "../../data/affiliates.js";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title="Do Homework and Earn Money | Student Side Income Finder - SideBuzCom"
+            description="Find the best ways to make money as a student in 2024. Free AI tool to discover side hustles, tutoring jobs, and passive income ideas for college students."
+        />
+        <link rel="stylesheet" href="/src/styles/global.css" />
+    </head>
+    <body>
+        <Header />
+
+        <main>
+            <!-- Quiz Container -->
+            <section class="quiz-section">
+                <div class="container">
+                    <!-- Intro Screen -->
+                    <div id="quiz-intro" class="quiz-screen active">
+                        <div class="intro-content">
+                            <span class="intro-badge"
+                                >🤖 AI-Powered Analysis</span
+                            >
+                            <h1>🎓 Student Income Finder</h1>
+                            <p class="intro-description">
+                                Answer 5 quick questions and discover the best
+                                ways to earn money while studying. Get
+                                personalized recommendations and realistic
+                                earning estimates.
+                            </p>
+                            <div class="intro-features">
+                                <div class="intro-feature">
+                                    <span class="feature-icon">⏱️</span>
+                                    <span>2 minutes</span>
+                                </div>
+                                <div class="intro-feature">
+                                    <span class="feature-icon">🎯</span>
+                                    <span>5 questions</span>
+                                </div>
+                                <div class="intro-feature">
+                                    <span class="feature-icon">💯</span>
+                                    <span>100% free</span>
+                                </div>
+                            </div>
+                            <button
+                                id="start-quiz"
+                                class="btn btn-primary btn-lg"
+                            >
+                                Start Free Analysis →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Questions Screen -->
+                    <div id="quiz-questions" class="quiz-screen">
+                        <!-- Progress Bar -->
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progress-bar"></div>
+                            <span class="progress-text" id="progress-text"
+                                >Question 1 of 5</span
+                            >
+                        </div>
+
+                        <!-- Question Content -->
+                        <div id="question-container">
+                            <!-- Questions will be rendered by JavaScript -->
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="quiz-nav">
+                            <button
+                                id="prev-btn"
+                                class="btn btn-outline"
+                                disabled
+                            >
+                                ← Back
+                            </button>
+                            <button id="next-btn" class="btn btn-primary">
+                                Next →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Loading Screen -->
+                    <div id="quiz-loading" class="quiz-screen">
+                        <div class="loading-content">
+                            <div class="loading-spinner"></div>
+                            <h2>✨ AI is analyzing your profile...</h2>
+                            <p>Finding the best income opportunities for you</p>
+                        </div>
+                    </div>
+
+                    <!-- Results Screen -->
+                    <div id="quiz-results" class="quiz-screen">
+                        <!-- Results will be rendered by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <Footer />
+
+        <!-- Quiz Data -->
+        <script define:vars={{ quizQuestions, incomeOptions, affiliates }}>
+            window.QUIZ_DATA = {
+                questions: quizQuestions,
+                options: incomeOptions,
+                affiliates: affiliates,
+            };
+        </script>
+
+        <!-- Quiz Logic -->
+        <script>
+            const QUIZ = window.QUIZ_DATA;
+            let currentQuestion = 0;
+            let answers = {};
+
+            // DOM Elements
+            const introScreen = document.getElementById("quiz-intro");
+            const questionsScreen = document.getElementById("quiz-questions");
+            const loadingScreen = document.getElementById("quiz-loading");
+            const resultsScreen = document.getElementById("quiz-results");
+            const progressBar = document.getElementById("progress-bar");
+            const progressText = document.getElementById("progress-text");
+            const questionContainer =
+                document.getElementById("question-container");
+            const prevBtn = document.getElementById("prev-btn");
+            const nextBtn = document.getElementById("next-btn");
+            const startBtn = document.getElementById("start-quiz");
+
+            // Start Quiz
+            startBtn.addEventListener("click", () => {
+                showScreen("questions");
+                renderQuestion();
+            });
+
+            // Navigation
+            prevBtn.addEventListener("click", () => {
+                if (currentQuestion > 0) {
+                    currentQuestion--;
+                    renderQuestion();
+                }
+            });
+
+            nextBtn.addEventListener("click", () => {
+                const question = QUIZ.questions[currentQuestion];
+                const selected = getSelectedAnswer(question);
+
+                if (
+                    !selected ||
+                    (Array.isArray(selected) && selected.length === 0)
+                ) {
+                    alert("Please select an option to continue");
+                    return;
+                }
+
+                answers[question.id] = selected;
+
+                if (currentQuestion < QUIZ.questions.length - 1) {
+                    currentQuestion++;
+                    renderQuestion();
+                } else {
+                    showResults();
+                }
+            });
+
+            // Render Question
+            function renderQuestion() {
+                const question = QUIZ.questions[currentQuestion];
+                const total = QUIZ.questions.length;
+
+                // Update progress
+                const progress = ((currentQuestion + 1) / total) * 100;
+                progressBar.style.width = `${progress}%`;
+                progressText.textContent = `Question ${currentQuestion + 1} of ${total}`;
+
+                // Update buttons
+                prevBtn.disabled = currentQuestion === 0;
+                nextBtn.textContent =
+                    currentQuestion === total - 1 ? "See Results →" : "Next →";
+
+                // Render question
+                const savedAnswer = answers[question.id];
+
+                questionContainer.innerHTML = `
+          <div class="question-card">
+            <h2 class="question-text">${question.question}</h2>
+            <div class="options-grid ${question.type === "multiple" ? "multiple" : ""}">
+              ${question.options
+                  .map(
+                      (opt) => `
+                <label class="option-card ${isSelected(savedAnswer, opt.value) ? "selected" : ""}">
+                  <input 
+                    type="${question.type === "multiple" ? "checkbox" : "radio"}" 
+                    name="q-${question.id}" 
+                    value="${opt.value}"
+                    ${isSelected(savedAnswer, opt.value) ? "checked" : ""}
+                  />
+                  <span class="option-icon">${opt.icon}</span>
+                  <span class="option-label">${opt.label}</span>
+                </label>
+              `,
+                  )
+                  .join("")}
+            </div>
+            ${question.type === "multiple" ? '<p class="multi-hint">Select all that apply</p>' : ""}
+          </div>
+        `;
+
+                // Add event listeners
+                questionContainer
+                    .querySelectorAll(".option-card")
+                    .forEach((card) => {
+                        card.addEventListener("click", () => {
+                            if (question.type === "single") {
+                                questionContainer
+                                    .querySelectorAll(".option-card")
+                                    .forEach((c) =>
+                                        c.classList.remove("selected"),
+                                    );
+                            }
+                            card.classList.toggle("selected");
+                        });
+                    });
+            }
+
+            function isSelected(saved, value) {
+                if (!saved) return false;
+                if (Array.isArray(saved)) return saved.includes(value);
+                return saved === value;
+            }
+
+            function getSelectedAnswer(question) {
+                const inputs = questionContainer.querySelectorAll(
+                    `input[name="q-${question.id}"]:checked`,
+                );
+                if (question.type === "multiple") {
+                    return Array.from(inputs).map((i) => i.value);
+                }
+                return inputs[0]?.value || null;
+            }
+
+            // Client-side rate limiting
+            const clientRateLimiter = {
+                lastRequest: 0,
+                requestCount: 0,
+                maxRequests: 3,
+                windowMs: 60000, // 1 minute
+            };
+
+            function checkClientRateLimit() {
+                const now = Date.now();
+                if (
+                    now - clientRateLimiter.lastRequest >
+                    clientRateLimiter.windowMs
+                ) {
+                    clientRateLimiter.requestCount = 0;
+                }
+                if (
+                    clientRateLimiter.requestCount >=
+                    clientRateLimiter.maxRequests
+                ) {
+                    return false;
+                }
+                clientRateLimiter.requestCount++;
+                clientRateLimiter.lastRequest = now;
+                return true;
+            }
+
+            // Show Results with secure API call
+            async function showResults() {
+                showScreen("loading");
+
+                // Client-side rate limit check
+                if (!checkClientRateLimit()) {
+                    const aiAnalysis =
+                        "You've made several requests recently. Please wait a minute before trying again. In the meantime, here's our recommendation based on your profile!";
+                    const recommendations = matchRecommendations(answers);
+                    renderResults(recommendations, aiAnalysis);
+                    showScreen("results");
+                    return;
+                }
+
+                // Match recommendations locally first
+                const recommendations = matchRecommendations(answers);
+
+                let aiAnalysis;
+
+                try {
+                    // Try to call the API for AI analysis
+                    const response = await fetch("/api/analyze", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            answers: answers,
+                            recommendations: recommendations.slice(0, 3),
+                        }),
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        aiAnalysis = data.analysis;
+                    } else if (response.status === 429) {
+                        // Rate limited
+                        aiAnalysis =
+                            "Our AI is quite busy right now! Based on your profile, here's what we recommend:";
+                    } else {
+                        throw new Error("API error");
+                    }
+                } catch (error) {
+                    // Fallback to local analysis on any error
+                    console.log("Using fallback analysis");
+                    aiAnalysis = generateFallbackAnalysis(
+                        answers,
+                        recommendations,
+                    );
+                }
+
+                // Render results
+                renderResults(recommendations, aiAnalysis);
+                showScreen("results");
+            }
+
+            function matchRecommendations(answers) {
+                const { major, year, hours, skills, goal } = answers;
+                const userTags = new Set();
+
+                if (major) userTags.add(major);
+                if (year) userTags.add(year);
+                if (skills) skills.forEach((s) => userTags.add(s));
+
+                const scored = QUIZ.options.map((option) => {
+                    let score = 0;
+                    option.tags.forEach((tag) => {
+                        if (userTags.has(tag)) score += 10;
+                    });
+
+                    const userHours =
+                        hours === "5"
+                            ? 5
+                            : hours === "10"
+                              ? 10
+                              : hours === "20"
+                                ? 20
+                                : 25;
+                    if (option.difficulty === "Easy") score += 5;
+                    if (goal === "high" && option.difficulty !== "Easy")
+                        score += 5;
+                    if (goal === "low" && option.difficulty === "Easy")
+                        score += 10;
+
+                    return { ...option, score };
+                });
+
+                return scored.sort((a, b) => b.score - a.score).slice(0, 5);
+            }
+
+            function generateFallbackAnalysis(answers, recommendations) {
+                const topRec = recommendations[0]?.name || "online tutoring";
+                const hours =
+                    answers.hours === "5"
+                        ? "5"
+                        : answers.hours === "10"
+                          ? "10"
+                          : answers.hours === "20"
+                            ? "20"
+                            : "20+";
+
+                return `Based on your profile as a ${answers.year || "college"} student studying ${answers.major || "your field"}, I recommend starting with ${topRec}. With ${hours} hours per week available, you could realistically earn ${recommendations[0]?.monthlyPotential || "$400-$800"} per month. Your skills in ${answers.skills?.join(", ") || "various areas"} make you a great fit for these opportunities!`;
+            }
+
+            function renderResults(recommendations, aiAnalysis) {
+                const hoursNum =
+                    answers.hours === "5"
+                        ? 5
+                        : answers.hours === "10"
+                          ? 10
+                          : answers.hours === "20"
+                            ? 20
+                            : 25;
+
+                resultsScreen.innerHTML = `
+          <div class="results-container">
+            <div class="results-header">
+              <h1>🎉 Your Personalized Results</h1>
+              <p>Based on your profile, here are the best income opportunities for you:</p>
+            </div>
+            
+            <!-- AI Analysis Box -->
+            <div class="ai-box">
+              <div class="ai-box-header">
+                <span class="ai-icon">✨</span>
+                AI Personal Analysis
+              </div>
+              <div class="ai-box-content">
+                ${aiAnalysis}
+              </div>
+            </div>
+            
+            <!-- Recommendations -->
+            <div class="recommendations-list">
+              ${recommendations
+                  .map((rec, index) => {
+                      const affiliate =
+                          QUIZ.affiliates[rec.primaryAffiliate] || {};
+                      return `
+                  <div class="recommendation-card ${index === 0 ? "featured" : ""}">
+                    ${index === 0 ? '<div class="rec-badge">🏆 Best Match</div>' : ""}
+                    <div class="rec-header">
+                      <h3>${rec.name}</h3>
+                      <span class="rec-earnings">${rec.monthlyPotential}</span>
+                    </div>
+                    <p class="rec-description">${rec.description}</p>
+                    <div class="rec-details">
+                      <span class="rec-detail">⏱️ ${rec.timeCommitment}</span>
+                      <span class="rec-detail difficulty-${rec.difficulty.toLowerCase()}">
+                        ${rec.difficulty === "Easy" ? "🟢" : rec.difficulty === "Medium" ? "🟡" : "🔴"} ${rec.difficulty}
+                      </span>
+                    </div>
+                    <div class="rec-pros">
+                      ${rec.pros
+                          .slice(0, 3)
+                          .map(
+                              (pro) => `<span class="pro-item">✓ ${pro}</span>`,
+                          )
+                          .join("")}
+                    </div>
+                    <a 
+                      href="${affiliate.url || "#"}" 
+                      target="_blank" 
+                      rel="noopener sponsored"
+                      class="affiliate-btn"
+                      data-affiliate="${rec.primaryAffiliate}"
+                    >
+                      ${affiliate.cta || "Get Started"} →
+                    </a>
+                  </div>
+                `;
+                  })
+                  .join("")}
+            </div>
+            
+            <!-- Retake -->
+            <div class="results-footer">
+              <button id="retake-btn" class="btn btn-outline">
+                ← Take Quiz Again
+              </button>
+            </div>
+            
+            <!-- Affiliate Disclosure -->
+            <p class="affiliate-disclosure">
+              <small>
+                Affiliate Disclosure: Some links above are affiliate links. We may earn a commission 
+                if you sign up through these links, at no extra cost to you.
+              </small>
+            </p>
+          </div>
+        `;
+
+                // Retake button
+                document
+                    .getElementById("retake-btn")
+                    .addEventListener("click", () => {
+                        currentQuestion = 0;
+                        answers = {};
+                        showScreen("intro");
+                    });
+            }
+
+            // Screen Navigation
+            function showScreen(screen) {
+                [
+                    introScreen,
+                    questionsScreen,
+                    loadingScreen,
+                    resultsScreen,
+                ].forEach((s) => {
+                    s.classList.remove("active");
+                });
+
+                if (screen === "intro") introScreen.classList.add("active");
+                if (screen === "questions")
+                    questionsScreen.classList.add("active");
+                if (screen === "loading") loadingScreen.classList.add("active");
+                if (screen === "results") resultsScreen.classList.add("active");
+            }
+        </script>
+    </body>
+</html>
+
+<style is:global>
+    /* Quiz Section */
+    .quiz-section {
+        min-height: calc(100vh - 200px);
+        padding: 2rem 0 4rem;
+    }
+
+    .quiz-section .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    /* Screens */
+    .quiz-screen {
+        display: none;
+    }
+
+    .quiz-screen.active {
+        display: block;
+    }
+
+    /* Intro Screen */
+    .intro-content {
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .intro-badge {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        background: linear-gradient(135deg, #667eea20, #764ba220);
+        color: #7c3aed;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 50px;
+        margin-bottom: 1.5rem;
+        border: 1px solid #667eea40;
+    }
+
+    .intro-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+
+    .intro-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 500px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+    }
+
+    .intro-features {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .intro-feature {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+    }
+
+    .feature-icon {
+        font-size: 1.25rem;
+    }
+
+    .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    /* Progress */
+    .progress-container {
+        margin-bottom: 2rem;
+    }
+
+    .progress-bar {
+        height: 6px;
+        background: var(--ai-gradient);
+        border-radius: 50px;
+        transition: width 0.3s ease;
+    }
+
+    .progress-text {
+        display: block;
+        text-align: center;
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+
+    /* Question Card */
+    .question-card {
+        background: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .question-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin: 0 0 1.25rem;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .options-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .option-card {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        background: var(--bg-secondary);
+        border: 2px solid var(--border-color);
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .option-card:hover {
+        border-color: var(--accent-primary);
+        background: #eff6ff;
+        transform: translateX(4px);
+    }
+
+    .option-card.selected {
+        border-color: var(--accent-primary);
+        background: #dbeafe;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    .option-card input {
+        display: none;
+    }
+
+    .option-icon {
+        font-size: 1.35rem;
+        flex-shrink: 0;
+    }
+
+    .option-label {
+        color: var(--text-primary);
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+
+    .multi-hint {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-top: 1.25rem;
+    }
+
+    /* Quiz Navigation */
+    .quiz-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .quiz-nav .btn {
+        flex: 1;
+        padding: 0.875rem 1.5rem;
+    }
+
+    /* Loading Screen */
+    .loading-content {
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    .loading-spinner {
+        width: 60px;
+        height: 60px;
+        border: 4px solid var(--border-color);
+        border-top-color: var(--accent-primary);
+        border-radius: 50%;
+        margin: 0 auto 1.5rem;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loading-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+    }
+
+    .loading-content p {
+        color: var(--text-muted);
+    }
+
+    /* Results Screen */
+    .results-container {
+        padding: 2rem 0;
+    }
+
+    .results-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .results-header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+    }
+
+    .results-header p {
+        color: var(--text-secondary);
+    }
+
+    /* AI Box */
+    .ai-box {
+        background: linear-gradient(135deg, #faf5ff 0%, #f0f9ff 100%);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ai-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--ai-gradient);
+    }
+
+    .ai-box-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+        color: #7c3aed;
+    }
+
+    .ai-box-content {
+        color: var(--text-secondary);
+        line-height: 1.7;
+    }
+
+    /* Recommendation Cards */
+    .recommendations-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .recommendation-card {
+        position: relative;
+        background: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+    }
+
+    .recommendation-card.featured {
+        border: 2px solid var(--accent-primary);
+        background: linear-gradient(180deg, #eff6ff 0%, var(--bg-primary) 100%);
+    }
+
+    .rec-badge {
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        padding: 0.3rem 0.75rem;
+        background: var(--accent-cta);
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 50px;
+    }
+
+    .rec-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+    }
+
+    .rec-header h3 {
+        font-size: 1.2rem;
+        color: var(--text-primary);
+        margin: 0;
+    }
+
+    .rec-earnings {
+        font-weight: 700;
+        color: var(--accent-secondary);
+        font-size: 1rem;
+    }
+
+    .rec-description {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        margin: 0 0 1rem;
+        line-height: 1.5;
+    }
+
+    .rec-details {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .rec-detail {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .rec-pros {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .pro-item {
+        font-size: 0.8rem;
+        color: var(--accent-secondary);
+        background: #d1fae5;
+        padding: 0.2rem 0.6rem;
+        border-radius: 50px;
+    }
+
+    .affiliate-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.25rem;
+        background: var(--accent-cta);
+        color: white;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .affiliate-btn:hover {
+        background: #d97706;
+        transform: translateY(-1px);
+    }
+
+    /* Results Footer */
+    .results-footer {
+        text-align: center;
+        margin: 2rem 0 1rem;
+    }
+
+    .affiliate-disclosure {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        padding: 1rem;
+        background: var(--bg-secondary);
+        border-radius: var(--radius-md);
+        line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .intro-content h1 {
+            font-size: 2rem;
+        }
+
+        .intro-features {
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .question-text {
+            font-size: 1.15rem;
+        }
+
+        .rec-header {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+</style>

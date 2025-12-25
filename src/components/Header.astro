@@ -11,13 +11,20 @@ const categories = [
 ---
 
 <header>
-  <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
-    <div class="internal-links">
+  <nav class="container">
+    <a href="/" class="logo">
+      <span class="logo-icon">💰</span>
+      <span class="logo-text">{SITE_TITLE}</span>
+    </a>
+
+    <div class="nav-links">
       <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/tools">Tools</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
       <div class="dropdown">
-        <span class="dropdown-trigger">Categories ▼</span>
+        <span class="dropdown-trigger"
+          >Categories <span class="arrow">▼</span></span
+        >
         <div class="dropdown-menu">
           {
             categories.map((category) => (
@@ -32,120 +39,199 @@ const categories = [
       </div>
       <HeaderLink href="/about">About</HeaderLink>
     </div>
+
+    <a href="/tools/student-income-finder" class="header-cta">
+      Find Your Income Path →
+    </a>
+
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 </header>
 
 <style>
   header {
-    margin: 0;
-    padding: 0 1em;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 100;
   }
-  h2 {
-    margin: 0;
-    font-size: 1em;
-  }
 
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-    background: linear-gradient(90deg, #e94560, #f39c12);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 700;
-    font-size: 1.5em;
-  }
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em 0;
-  }
-  nav a {
-    padding: 0.5em 1em;
-    color: #fff;
-    border-bottom: 2px solid transparent;
-    text-decoration: none;
-    transition:
-      color 0.3s,
-      border-color 0.3s;
-  }
-  nav a.active {
-    border-bottom-color: #e94560;
-    color: #e94560;
-  }
-  nav a:hover {
-    color: #e94560;
-  }
-  .internal-links {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
   }
 
-  /* Dropdown styles */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+  }
+
+  .logo:hover {
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .logo-text {
+    background: linear-gradient(
+      135deg,
+      var(--accent-primary),
+      var(--accent-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .nav-links :global(a),
+  .dropdown-trigger {
+    padding: 0.5rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+  }
+
+  .nav-links :global(a):hover,
+  .dropdown-trigger:hover {
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+  }
+
+  .nav-links :global(a.active) {
+    color: var(--accent-primary);
+    background: #eff6ff;
+  }
+
+  /* Dropdown */
   .dropdown {
     position: relative;
   }
+
   .dropdown-trigger {
-    padding: 0.5em 1em;
-    color: #fff;
-    cursor: pointer;
-    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
-  .dropdown-trigger:hover {
-    color: #e94560;
+
+  .arrow {
+    font-size: 0.7rem;
+    transition: transform var(--transition-fast);
   }
+
+  .dropdown:hover .arrow {
+    transform: rotate(180deg);
+  }
+
   .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background: #1a1a2e;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
     min-width: 180px;
-    padding: 0.5em 0;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: 0.5rem 0;
     z-index: 10;
   }
+
   .dropdown:hover .dropdown-menu {
     display: block;
   }
+
   .dropdown-menu a {
     display: block;
-    padding: 0.6em 1em;
-    color: rgba(255, 255, 255, 0.9);
-    border-bottom: none;
-  }
-  .dropdown-menu a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #e94560;
+    padding: 0.6rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
   }
 
-  @media (max-width: 720px) {
-    nav {
-      flex-direction: column;
-      gap: 1em;
-    }
-    .internal-links {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .dropdown-menu {
-      position: static;
+  .dropdown-menu a:hover {
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+  }
+
+  /* CTA Button */
+  .header-cta {
+    padding: 0.5rem 1rem;
+    background: var(--accent-cta);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+  }
+
+  .header-cta:hover {
+    background: #d97706;
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  /* Mobile menu button */
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .nav-links,
+    .header-cta {
       display: none;
-      width: 100%;
     }
-    .dropdown:hover .dropdown-menu {
-      display: block;
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-text {
+      display: none;
     }
   }
 </style>

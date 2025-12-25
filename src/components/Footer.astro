@@ -1,25 +1,219 @@
 ---
-const today = new Date();
+import { SITE_TITLE } from "../consts";
+const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <p>
-    &copy; {today.getFullYear()} SideBuzCom. All rights reserved.
-  </p>
-  <p class="tagline">Side Hustle Ideas for Students to Make Extra Money Online</p>
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <span class="logo-icon">💰</span>
+          <span class="logo-text">{SITE_TITLE}</span>
+        </a>
+        <p class="tagline">
+          Helping students and freelancers find their path to financial freedom.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools">Tools</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="footer-links">
+        <h4>Free Tools</h4>
+        <ul>
+          <li>
+            <a href="/tools/student-income-finder">Student Income Finder</a>
+          </li>
+          <li><a href="/tools/self-employed-business">Business Finder</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/disclosure">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal-links">
+        <a href="/privacy">Privacy</a>
+        <span>•</span>
+        <a href="/terms">Terms</a>
+        <span>•</span>
+        <a href="/disclosure">Disclosure</a>
+      </div>
+      <p>&copy; {currentYear} {SITE_TITLE}. All rights reserved.</p>
+      <p class="disclaimer">
+        <small
+          >Affiliate Disclosure: Some links on this site are affiliate links. We
+          may earn a commission if you make a purchase through these links, at
+          no extra cost to you. <a href="/disclosure">Learn more</a>.</small
+        >
+      </p>
+    </div>
+  </div>
 </footer>
+
 <style>
   footer {
-    padding: 2em 1em;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7);
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+    padding: 3rem 0 1.5rem;
   }
-  footer p {
-    margin: 0.5em 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
   }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .logo-text {
+    background: linear-gradient(
+      135deg,
+      var(--accent-primary),
+      var(--accent-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .tagline {
-    font-size: 0.9em;
-    opacity: 0.8;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 280px;
+  }
+
+  .footer-links h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color var(--transition-fast);
+  }
+
+  .footer-links a:hover {
+    color: var(--accent-primary);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+  }
+
+  .disclaimer {
+    max-width: 600px;
+    margin: 1rem auto 0;
+    line-height: 1.5;
+  }
+
+  .disclaimer a {
+    color: var(--accent-primary);
+  }
+
+  .footer-legal-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-legal-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+
+  .footer-legal-links a:hover {
+    color: var(--accent-primary);
+  }
+
+  .footer-legal-links span {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
