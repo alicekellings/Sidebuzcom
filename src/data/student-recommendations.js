@@ -65,8 +65,8 @@ export const incomeOptions = [
         timeCommitment: '8-20 hours/week',
         difficulty: 'Medium',
         tags: ['writing', 'humanities', 'arts', 'creative'],
-        platforms: ['fiverr', 'upwork'],
-        primaryAffiliate: 'fiverr',
+        platforms: ['writingjobs', 'fiverr', 'upwork'],
+        primaryAffiliate: 'writingjobs',
         pros: [
             'Build a portfolio',
             'Scale your rates',
@@ -140,8 +140,8 @@ export const incomeOptions = [
         timeCommitment: '10-20 hours/week',
         difficulty: 'Easy',
         tags: ['business', 'admin', 'no-skills', 'organized'],
-        platforms: ['upwork', 'fiverr'],
-        primaryAffiliate: 'upwork',
+        platforms: ['virtualassistant', 'upwork', 'fiverr'],
+        primaryAffiliate: 'virtualassistant',
         pros: [
             'No special skills needed',
             'Flexible hours',
@@ -215,8 +215,8 @@ export const incomeOptions = [
         timeCommitment: '2-5 hours/week',
         difficulty: 'Easy',
         tags: ['studying', 'organized', 'freshman', 'sophomore', 'stem', 'humanities'],
-        platforms: ['studypool'],
-        primaryAffiliate: 'studypool',
+        platforms: ['coursehero'],
+        primaryAffiliate: 'coursehero',
         pros: [
             'Passive income potential',
             'Monetize existing work',
