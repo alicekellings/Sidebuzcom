@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Internal documentation (contains sensitive affiliate/strategy info)
+AFFILIATE_MANAGEMENT.md
+TOOL_PROJECT_SPEC.md
+RENOVATION_PLAN.md
+QUICK_DEPLOY.md
+quick-push.ps1
