@@ -40,6 +40,17 @@ export const affiliates = {
         logo: "/images/affiliates/filmora.svg"
     },
 
+    educative: {
+        id: 'educative',
+        name: "Educative",
+        url: "https://educative.pxf.io/LKJbvM",
+        cta: "Start Learning",
+        earnings: "Learn to code & earn more",
+        description: "Interactive coding courses to boost your tech skills and earning potential",
+        category: "education",
+        logo: "/images/affiliates/educative.svg"
+    },
+
     // ========================================
     // CLICKBANK 联盟平台
     // ========================================

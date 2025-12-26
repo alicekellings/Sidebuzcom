@@ -115,8 +115,8 @@ export const incomeOptions = [
         timeCommitment: '10-25 hours/week',
         difficulty: 'Hard',
         tags: ['coding', 'tech', 'stem', 'programming'],
-        platforms: [],
-        primaryAffiliate: null,
+        platforms: ['educative'],
+        primaryAffiliate: 'educative',
         pros: [
             'Highest earning potential',
             'Always in demand',

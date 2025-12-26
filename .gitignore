@@ -24,12 +24,6 @@ pnpm-debug.log*
 .idea/
 
 # Internal documentation (contains sensitive affiliate/strategy info)
-AFFILIATE_MANAGEMENT.md
-TOOL_PROJECT_SPEC.md
-RENOVATION_PLAN.md
-QUICK_DEPLOY.md
-quick-push.ps1
-SEO_KEYWORD_STRATEGY.md
+/*.md
 关键字列表.txt
-affiliate_coverage_analysis.md
-站内的博客要求.md
+quick-push.ps1
