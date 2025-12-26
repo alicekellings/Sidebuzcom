@@ -1,0 +1,999 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title="Best Self Employed Business Ideas | AI Business Finder - SideBuz"
+            description="Find the best self-employed business to start based on your budget, skills, and goals. Free AI-powered tool with startup costs, earnings potential, and action plans."
+        />
+        <link rel="stylesheet" href="/src/styles/global.css" />
+    </head>
+    <body>
+        <Header />
+
+        <main>
+            <section class="business-section">
+                <div class="container">
+                    <!-- Input Screen -->
+                    <div id="input-screen" class="screen active">
+                        <div class="intro-content">
+                            <span class="ai-badge">🤖 AI-Powered</span>
+                            <h1>🚀 Business Idea Finder</h1>
+                            <p class="intro-description">
+                                Answer a few questions and discover the
+                                <strong>best self-employed business</strong>
+                                ideas for your situation.
+                            </p>
+
+                            <div class="quiz-form">
+                                <!-- Budget -->
+                                <div class="form-group">
+                                    <label>💰 Starting Budget</label>
+                                    <div class="options-grid">
+                                        <button
+                                            class="option-btn"
+                                            data-field="budget"
+                                            data-value="$0-$100"
+                                        >
+                                            <span class="opt-icon">🆓</span>
+                                            <span>$0 - $100</span>
+                                            <span class="opt-desc"
+                                                >Nearly free</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="option-btn"
+                                            data-field="budget"
+                                            data-value="$100-$500"
+                                        >
+                                            <span class="opt-icon">💵</span>
+                                            <span>$100 - $500</span>
+                                            <span class="opt-desc"
+                                                >Low budget</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="option-btn"
+                                            data-field="budget"
+                                            data-value="$500-$2000"
+                                        >
+                                            <span class="opt-icon">💳</span>
+                                            <span>$500 - $2,000</span>
+                                            <span class="opt-desc"
+                                                >Moderate</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="option-btn"
+                                            data-field="budget"
+                                            data-value="$2000+"
+                                        >
+                                            <span class="opt-icon">💎</span>
+                                            <span>$2,000+</span>
+                                            <span class="opt-desc"
+                                                >Ready to invest</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Skills -->
+                                <div class="form-group">
+                                    <label
+                                        >🎯 Your Skills (select all that apply)</label
+                                    >
+                                    <div class="skills-grid">
+                                        <button
+                                            class="skill-btn"
+                                            data-skill="writing"
+                                            >✍️ Writing</button
+                                        >
+                                        <button
+                                            class="skill-btn"
+                                            data-skill="design"
+                                            >🎨 Design</button
+                                        >
+                                        <button
+                                            class="skill-btn"
+                                            data-skill="coding"
+                                            >💻 Coding</button
+                                        >
+                                        <button
+                                            class="skill-btn"
+                                            data-skill="marketing"
+                                            >📢 Marketing</button
+                                        >
+                                        <button
+                                            class="skill-btn"
+                                            data-skill="video">🎬 Video</button
+                                        >
+                                        <button
+                                            class="skill-btn"
+                                            data-skill="sales">🤝 Sales</button
+                                        >
+                                        <button
+                                            class="skill-btn"
+                                            data-skill="teaching"
+                                            >👨‍🏫 Teaching</button
+                                        >
+                                        <button
+                                            class="skill-btn"
+                                            data-skill="social-media"
+                                            >📱 Social Media</button
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Time -->
+                                <div class="form-group">
+                                    <label>⏰ Time You Can Invest</label>
+                                    <div class="options-grid">
+                                        <button
+                                            class="option-btn"
+                                            data-field="time"
+                                            data-value="5-10 hours/week"
+                                        >
+                                            <span class="opt-icon">⚡</span>
+                                            <span>5-10 hrs/week</span>
+                                            <span class="opt-desc"
+                                                >Side project</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="option-btn"
+                                            data-field="time"
+                                            data-value="10-20 hours/week"
+                                        >
+                                            <span class="opt-icon">🔥</span>
+                                            <span>10-20 hrs/week</span>
+                                            <span class="opt-desc"
+                                                >Serious side biz</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="option-btn"
+                                            data-field="time"
+                                            data-value="20-40 hours/week"
+                                        >
+                                            <span class="opt-icon">💪</span>
+                                            <span>20-40 hrs/week</span>
+                                            <span class="opt-desc"
+                                                >Part to full-time</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="option-btn"
+                                            data-field="time"
+                                            data-value="40+ hours/week"
+                                        >
+                                            <span class="opt-icon">🚀</span>
+                                            <span>40+ hrs/week</span>
+                                            <span class="opt-desc"
+                                                >Full commitment</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Goals -->
+                                <div class="form-group">
+                                    <label>🎯 Your Main Goal</label>
+                                    <div class="options-grid">
+                                        <button
+                                            class="option-btn"
+                                            data-field="goals"
+                                            data-value="extra income"
+                                        >
+                                            <span class="opt-icon">💵</span>
+                                            <span>Extra Income</span>
+                                            <span class="opt-desc"
+                                                >$500-$2K/month</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="option-btn"
+                                            data-field="goals"
+                                            data-value="replace job"
+                                        >
+                                            <span class="opt-icon">🔄</span>
+                                            <span>Replace Job</span>
+                                            <span class="opt-desc"
+                                                >Full-time income</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="option-btn"
+                                            data-field="goals"
+                                            data-value="build wealth"
+                                        >
+                                            <span class="opt-icon">📈</span>
+                                            <span>Build Wealth</span>
+                                            <span class="opt-desc"
+                                                >Scalable business</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="option-btn"
+                                            data-field="goals"
+                                            data-value="freedom"
+                                        >
+                                            <span class="opt-icon">🌴</span>
+                                            <span>Freedom</span>
+                                            <span class="opt-desc"
+                                                >Work anywhere</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                id="generate-btn"
+                                class="btn btn-primary btn-lg"
+                                disabled
+                            >
+                                ✨ Find My Business Ideas
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Loading Screen -->
+                    <div id="loading-screen" class="screen">
+                        <div class="loading-content">
+                            <div class="loading-spinner"></div>
+                            <h2>🧠 AI is analyzing...</h2>
+                            <p>Finding the perfect business ideas for you</p>
+                            <div class="loading-steps">
+                                <div class="step" id="step-1">
+                                    📊 Analyzing your profile...
+                                </div>
+                                <div class="step" id="step-2">
+                                    🔍 Matching to business models...
+                                </div>
+                                <div class="step" id="step-3">
+                                    📝 Creating action plans...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results Screen -->
+                    <div id="results-screen" class="screen">
+                        <div class="results-content">
+                            <h2>🎯 Your Perfect Business Ideas</h2>
+                            <p class="results-subtitle">
+                                Based on your profile, here are 3 businesses you
+                                could start:
+                            </p>
+
+                            <div
+                                id="businesses-container"
+                                class="businesses-grid"
+                            >
+                                <!-- AI-generated businesses will be inserted here -->
+                            </div>
+
+                            <div class="results-cta">
+                                <p>Want to explore more options?</p>
+                                <a
+                                    href="/tools/ai-hustle-generator"
+                                    class="btn btn-secondary"
+                                >
+                                    💡 Try AI Hustle Generator
+                                </a>
+                                <button
+                                    id="try-again-btn"
+                                    class="btn btn-outline"
+                                >
+                                    🔄 Start Over
+                                </button>
+                            </div>
+
+                            <div class="affiliate-disclosure">
+                                <p>
+                                    💡 These are AI-generated suggestions based
+                                    on your input. Research each opportunity
+                                    thoroughly before investing time or money.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <Footer />
+    </body>
+</html>
+
+<script>
+    // State
+    let selectedBudget = "";
+    let selectedSkills: string[] = [];
+    let selectedTime = "";
+    let selectedGoals = "";
+
+    // DOM Elements
+    const inputScreen = document.getElementById("input-screen");
+    const loadingScreen = document.getElementById("loading-screen");
+    const resultsScreen = document.getElementById("results-screen");
+    const generateBtn = document.getElementById("generate-btn");
+    const tryAgainBtn = document.getElementById("try-again-btn");
+    const businessesContainer = document.getElementById("businesses-container");
+
+    // Option buttons
+    document.querySelectorAll(".option-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const field = btn.getAttribute("data-field");
+            const value = btn.getAttribute("data-value") || "";
+
+            // Unselect siblings
+            btn.parentElement
+                ?.querySelectorAll(".option-btn")
+                .forEach((b) => b.classList.remove("selected"));
+            btn.classList.add("selected");
+
+            if (field === "budget") selectedBudget = value;
+            if (field === "time") selectedTime = value;
+            if (field === "goals") selectedGoals = value;
+
+            updateGenerateButton();
+        });
+    });
+
+    // Skill buttons (multi-select)
+    document.querySelectorAll(".skill-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const skill = btn.getAttribute("data-skill") || "";
+
+            if (btn.classList.contains("selected")) {
+                btn.classList.remove("selected");
+                selectedSkills = selectedSkills.filter((s) => s !== skill);
+            } else {
+                btn.classList.add("selected");
+                selectedSkills.push(skill);
+            }
+
+            updateGenerateButton();
+        });
+    });
+
+    function updateGenerateButton() {
+        if (generateBtn) {
+            (generateBtn as HTMLButtonElement).disabled =
+                !selectedBudget ||
+                selectedSkills.length === 0 ||
+                !selectedTime ||
+                !selectedGoals;
+        }
+    }
+
+    // Generate button
+    generateBtn?.addEventListener("click", async () => {
+        if (!selectedBudget || selectedSkills.length === 0) return;
+
+        showScreen("loading");
+        animateLoadingSteps();
+
+        try {
+            const response = await fetch("/api/generate-business", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    budget: selectedBudget,
+                    skills: selectedSkills,
+                    timeCommitment: selectedTime,
+                    goals: selectedGoals,
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.success && data.businesses) {
+                displayBusinesses(data.businesses);
+                showScreen("results");
+            } else {
+                throw new Error("Failed to generate");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            displayBusinesses(getFallbackBusinesses());
+            showScreen("results");
+        }
+    });
+
+    // Try again
+    tryAgainBtn?.addEventListener("click", () => {
+        selectedBudget = "";
+        selectedSkills = [];
+        selectedTime = "";
+        selectedGoals = "";
+        document
+            .querySelectorAll(".option-btn.selected, .skill-btn.selected")
+            .forEach((btn) => {
+                btn.classList.remove("selected");
+            });
+        updateGenerateButton();
+        showScreen("input");
+    });
+
+    function showScreen(screen: string) {
+        inputScreen?.classList.remove("active");
+        loadingScreen?.classList.remove("active");
+        resultsScreen?.classList.remove("active");
+
+        if (screen === "input") inputScreen?.classList.add("active");
+        if (screen === "loading") loadingScreen?.classList.add("active");
+        if (screen === "results") resultsScreen?.classList.add("active");
+    }
+
+    function animateLoadingSteps() {
+        const steps = document.querySelectorAll(".loading-steps .step");
+        steps.forEach((step, i) => {
+            setTimeout(() => {
+                step.classList.add("active");
+            }, i * 800);
+        });
+    }
+
+    function displayBusinesses(businesses: any[]) {
+        if (!businessesContainer) return;
+
+        businessesContainer.innerHTML = businesses
+            .map(
+                (b, i) => `
+            <div class="business-card" style="animation-delay: ${i * 0.15}s">
+                <div class="business-header">
+                    <span class="business-emoji">${b.emoji || "💼"}</span>
+                    <div>
+                        <h3>${b.name}</h3>
+                        <span class="business-category">${b.category}</span>
+                    </div>
+                </div>
+
+                <p class="business-description">${b.description}</p>
+
+                <div class="business-stats">
+                    <div class="stat-row">
+                        <span class="stat-label">💰 Startup Cost:</span>
+                        <span class="stat-value">${b.startupCost}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">📈 Monthly Potential:</span>
+                        <span class="stat-value highlight">${b.monthlyEarnings}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">⏱️ Time to Profit:</span>
+                        <span class="stat-value">${b.timeToProfit}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">📊 Difficulty:</span>
+                        <span class="stat-value difficulty-${b.difficulty?.toLowerCase() || "medium"}">${b.difficulty}</span>
+                    </div>
+                </div>
+
+                <div class="requirements">
+                    <h4>📋 What You'll Need</h4>
+                    <ul>
+                        ${b.requirements?.map((r: string) => `<li>✓ ${r}</li>`).join("") || ""}
+                    </ul>
+                </div>
+
+                <div class="first-week">
+                    <h4>🚀 Your First Week</h4>
+                    <div class="timeline">
+                        ${
+                            b.firstWeekPlan
+                                ?.map(
+                                    (p: string, idx: number) => `
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <span>${p}</span>
+                            </div>
+                        `,
+                                )
+                                .join("") || ""
+                        }
+                    </div>
+                </div>
+            </div>
+        `,
+            )
+            .join("");
+    }
+
+    function getFallbackBusinesses() {
+        return [
+            {
+                name: "Freelance Service Business",
+                emoji: "💻",
+                category: "Service",
+                startupCost: "$0-$100",
+                monthlyEarnings: "$1,000-$5,000 potential",
+                timeToProfit: "1-2 months",
+                difficulty: "Easy",
+                description:
+                    "Start offering your skills as a freelance service. Perfect for beginners.",
+                requirements: [
+                    "A marketable skill",
+                    "Laptop and internet",
+                    "Portfolio samples",
+                ],
+                firstWeekPlan: [
+                    "Days 1-2: Set up profiles",
+                    "Days 3-4: Create portfolio",
+                    "Days 5-7: Apply to jobs",
+                ],
+            },
+            {
+                name: "Print-on-Demand Store",
+                emoji: "👕",
+                category: "E-commerce",
+                startupCost: "$0-$200",
+                monthlyEarnings: "$500-$3,000 potential",
+                timeToProfit: "2-4 months",
+                difficulty: "Medium",
+                description: "Sell custom-designed products without inventory.",
+                requirements: [
+                    "Design skills",
+                    "Printful account",
+                    "Shopify store",
+                ],
+                firstWeekPlan: [
+                    "Days 1-2: Research niche",
+                    "Days 3-4: Create designs",
+                    "Days 5-7: Set up store",
+                ],
+            },
+            {
+                name: "Digital Product Business",
+                emoji: "📚",
+                category: "Digital",
+                startupCost: "$0-$500",
+                monthlyEarnings: "$1,000-$10,000 potential",
+                timeToProfit: "2-6 months",
+                difficulty: "Medium",
+                description:
+                    "Create and sell digital products like courses or templates.",
+                requirements: [
+                    "Expertise in topic",
+                    "Content tools",
+                    "Sales platform",
+                ],
+                firstWeekPlan: [
+                    "Days 1-2: Outline product",
+                    "Days 3-5: Create MVP",
+                    "Days 6-7: Set up sales",
+                ],
+            },
+        ];
+    }
+</script>
+
+<style>
+    .business-section {
+        min-height: 80vh;
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .screen {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .screen.active {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Intro Screen */
+    .intro-content {
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+
+    .ai-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .intro-content h1 {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+
+    .intro-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 2rem;
+    }
+
+    /* Form */
+    .quiz-form {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+    }
+
+    .options-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .option-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 1rem;
+        background: var(--bg-secondary);
+        border: 2px solid var(--border-color);
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-align: center;
+    }
+
+    .option-btn:hover {
+        border-color: var(--accent-primary);
+    }
+
+    .option-btn.selected {
+        border-color: var(--accent-primary);
+        background: #eff6ff;
+    }
+
+    .opt-icon {
+        font-size: 1.5rem;
+    }
+
+    .opt-desc {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .skill-btn {
+        padding: 0.5rem 1rem;
+        background: var(--bg-secondary);
+        border: 2px solid var(--border-color);
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 0.9rem;
+    }
+
+    .skill-btn:hover {
+        border-color: var(--accent-primary);
+    }
+
+    .skill-btn.selected {
+        border-color: var(--accent-primary);
+        background: var(--accent-primary);
+        color: white;
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+    }
+
+    .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--accent-primary), #7c3aed);
+        color: white;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-primary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .btn-secondary {
+        background: var(--accent-cta);
+        color: white;
+    }
+
+    .btn-outline {
+        background: transparent;
+        border: 2px solid var(--border-color);
+        color: var(--text-primary);
+    }
+
+    /* Loading */
+    .loading-content {
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    .loading-spinner {
+        width: 60px;
+        height: 60px;
+        border: 4px solid var(--border-color);
+        border-top-color: var(--accent-primary);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 2rem;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loading-steps {
+        margin-top: 2rem;
+    }
+
+    .loading-steps .step {
+        color: var(--text-muted);
+        padding: 0.5rem;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    }
+
+    .loading-steps .step.active {
+        opacity: 1;
+        color: var(--accent-primary);
+    }
+
+    /* Results */
+    .results-content {
+        padding: 2rem 0;
+    }
+
+    .results-content h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .results-subtitle {
+        text-align: center;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+    }
+
+    .businesses-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .business-card {
+        background: white;
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 1.5rem;
+        animation: fadeInUp 0.4s ease both;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .business-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .business-emoji {
+        font-size: 2.5rem;
+    }
+
+    .business-header h3 {
+        font-size: 1.25rem;
+        color: var(--text-primary);
+        margin: 0;
+    }
+
+    .business-category {
+        display: inline-block;
+        background: #e0f2fe;
+        color: #0369a1;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .business-description {
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .business-stats {
+        background: var(--bg-secondary);
+        padding: 1rem;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+    }
+
+    .stat-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .stat-row:last-child {
+        border-bottom: none;
+    }
+
+    .stat-label {
+        color: var(--text-secondary);
+    }
+
+    .stat-value {
+        font-weight: 600;
+    }
+
+    .stat-value.highlight {
+        color: #16a34a;
+    }
+
+    .difficulty-easy {
+        color: #10b981;
+    }
+    .difficulty-medium {
+        color: #f59e0b;
+    }
+    .difficulty-hard {
+        color: #ef4444;
+    }
+
+    .requirements,
+    .first-week {
+        margin-top: 1rem;
+    }
+
+    .requirements h4,
+    .first-week h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+    }
+
+    .requirements ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .requirements li {
+        padding: 0.25rem 0;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    .timeline {
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    .timeline-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+
+    .timeline-dot {
+        width: 10px;
+        height: 10px;
+        background: var(--accent-primary);
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-top: 0.3rem;
+    }
+
+    .results-cta {
+        text-align: center;
+        padding: 2rem;
+        background: var(--bg-secondary);
+        border-radius: 16px;
+        margin-bottom: 1rem;
+    }
+
+    .results-cta p {
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
+    }
+
+    .results-cta .btn {
+        margin: 0.5rem;
+    }
+
+    .affiliate-disclosure {
+        text-align: center;
+        padding: 1rem;
+        background: #fef3c7;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+    }
+
+    @media (max-width: 600px) {
+        .options-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .intro-content h1 {
+            font-size: 1.75rem;
+        }
+
+        .business-stats .stat-row {
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+    }
+</style>
