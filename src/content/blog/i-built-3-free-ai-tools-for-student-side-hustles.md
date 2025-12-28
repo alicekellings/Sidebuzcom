@@ -1,9 +1,9 @@
 ---
-title: 'I Built 3 Free AI Tools to Help Students Find Side Hustles (And They Actually Work)'
-description: 'Discover 3 free AI-powered tools that help college students find the perfect side hustle. Student Income Finder, AI Hustle Generator, and Business Idea Finder - all built for broke students.'
-pubDate: 'Dec 28 2024'
-heroImage: '/blog-placeholder-3.jpg'
-category: 'side-hustle'
+title: "I Built 3 Free AI Tools to Help Students Find Side Hustles (And They Actually Work)"
+description: "Discover 3 free AI-powered tools that help college students find the perfect side hustle. Student Income Finder, AI Hustle Generator, and Business Idea Finder - all built for broke students."
+pubDate: "2025-12-28"
+heroImage: "/blog-placeholder-3.jpg"
+category: "side-hustle"
 ---
 
 Okay, confession time.
