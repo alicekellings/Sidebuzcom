@@ -1,0 +1,591 @@
+/* Student Income Finder Styles */
+
+/* Quiz Section */
+.quiz-section {
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0 4rem;
+}
+
+.quiz-section .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Screens */
+.quiz-screen {
+    display: none;
+}
+
+.quiz-screen.active {
+    display: block;
+}
+
+/* Intro Screen */
+.intro-content {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.intro-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, #667eea20, #764ba220);
+    color: #7c3aed;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #667eea40;
+}
+
+.intro-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.intro-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+.intro-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.intro-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.feature-icon {
+    font-size: 1.25rem;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Progress */
+.progress-container {
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--ai-gradient);
+    border-radius: 50px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    display: block;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Question Card */
+.question-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 1.25rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.option-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-card:hover {
+    border-color: var(--accent-primary);
+    background: #eff6ff;
+    transform: translateX(4px);
+}
+
+.option-card.selected {
+    border-color: var(--accent-primary);
+    background: #dbeafe;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.option-card input {
+    display: none;
+}
+
+.option-icon {
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+
+.option-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.multi-hint {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 1.25rem;
+}
+
+/* Quiz Navigation */
+.quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.quiz-nav .btn {
+    flex: 1;
+    padding: 0.875rem 1.5rem;
+}
+
+/* Loading Screen */
+.loading-content {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--border-color);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.loading-content p {
+    color: var(--text-muted);
+}
+
+/* Results Screen */
+.results-container {
+    padding: 2rem 0;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.results-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.results-header p {
+    color: var(--text-secondary);
+}
+
+/* AI Box */
+.ai-box {
+    background: linear-gradient(135deg, #faf5ff 0%, #f0f9ff 100%);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--ai-gradient);
+}
+
+.ai-box-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #7c3aed;
+}
+
+.ai-box-content {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Recommendation Cards */
+.recommendations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.recommendation-card {
+    position: relative;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+}
+
+.recommendation-card.featured {
+    border: 2px solid var(--accent-primary);
+    background: linear-gradient(180deg, #eff6ff 0%, var(--bg-primary) 100%);
+}
+
+.rec-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    padding: 0.3rem 0.75rem;
+    background: var(--accent-cta);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.rec-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.rec-header h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.rec-earnings {
+    font-weight: 700;
+    color: var(--accent-secondary);
+    font-size: 1rem;
+}
+
+.rec-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+    line-height: 1.5;
+}
+
+.rec-details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rec-detail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.rec-pros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.pro-item {
+    font-size: 0.8rem;
+    color: var(--accent-secondary);
+    background: #d1fae5;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+}
+
+.affiliate-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    background: var(--accent-cta);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.affiliate-btn:hover {
+    background: #d97706;
+    transform: translateY(-1px);
+}
+
+.affiliate-btn.btn-disabled {
+    background: #9ca3af;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.affiliate-btn.btn-disabled:hover {
+    background: #9ca3af;
+    transform: none;
+}
+
+/* Results Footer */
+.results-footer {
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
+.affiliate-disclosure {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .intro-content h1 {
+        font-size: 2rem;
+    }
+
+    .intro-features {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .question-text {
+        font-size: 1.15rem;
+    }
+
+    .rec-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Roadmap CTA */
+.roadmap-cta {
+    margin-top: 2rem;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border: 2px solid #0ea5e9;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.roadmap-badge {
+    display: inline-block;
+    background: #0ea5e9;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.roadmap-cta h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.roadmap-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: white;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+}
+
+/* Roadmap Modal */
+.roadmap-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.roadmap-modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.roadmap-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.roadmap-loading {
+    text-align: center;
+    padding: 3rem;
+}
+
+.roadmap-loading .loading-spinner {
+    margin-bottom: 1rem;
+}
+
+.roadmap-overview {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.roadmap-weeks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.roadmap-week {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.week-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.week-number {
+    background: var(--accent-primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.week-header h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.week-goal {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.week-tasks {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75rem;
+}
+
+.week-tasks li {
+    padding: 0.25rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.week-resource {
+    background: #fef3c7;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.roadmap-milestones {
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.roadmap-milestones h4 {
+    margin: 0 0 0.75rem;
+}
+
+.milestone {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+.milestone.final {
+    font-weight: 600;
+    color: #16a34a;
+}
