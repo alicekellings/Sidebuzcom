@@ -14,7 +14,6 @@ const { title, description, pubDate, updatedDate, heroImage, category, tags } =
 <html lang="en">
   <head>
     <BaseHead title={title} description={description || ""} />
-    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
 
   <body>
@@ -79,7 +78,7 @@ const { title, description, pubDate, updatedDate, heroImage, category, tags } =
   }
 
   .container {
-    max-width: 720px;
+    max-width: var(--content-width, 720px);
     margin: 0 auto;
     padding: 0 1.5rem;
   }
