@@ -97,6 +97,12 @@ Return ONLY the JSON array, no other text`;
     if (!response.ok) {
         const errorText = await response.text();
         console.error('Groq API Error:', response.status, errorText);
+
+        // Handle rate limiting
+        if (response.status === 429) {
+            throw new Error('RATE_LIMITED');
+        }
+
         throw new Error(`API error: ${response.status}`);
     }
 

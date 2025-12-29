@@ -62,6 +62,21 @@ Use a warm, supportive tone. Focus on actionable advice.`
         if (!response.ok) {
             const errorText = await response.text();
             console.error('Groq API Error:', response.status, errorText);
+
+            // Handle rate limiting specifically
+            if (response.status === 429) {
+                return new Response(JSON.stringify({
+                    success: false,
+                    error: 'AI service is busy right now. Please try again in a moment.',
+                    errorCode: 'RATE_LIMITED',
+                    analysis: getFallbackAnalysis(answers, recommendations),
+                    source: 'fallback',
+                }), {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' }
+                });
+            }
+
             throw new Error(`API error: ${response.status}`);
         }
 
@@ -85,8 +100,9 @@ Use a warm, supportive tone. Focus on actionable advice.`
         console.error('API Error:', error);
         return new Response(JSON.stringify({
             success: true,
-            analysis: getFallbackAnalysis({}, []),
+            analysis: getFallbackAnalysis(answers || {}, recommendations || []),
             source: 'fallback',
+            note: 'Using smart recommendations while AI is unavailable.',
         }), {
             status: 200,
             headers: { 'Content-Type': 'application/json' }
