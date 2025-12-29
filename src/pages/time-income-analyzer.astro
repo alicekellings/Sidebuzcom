@@ -18,22 +18,21 @@ const description =
         <Header />
 
         <main class="analyzer-page">
-            <!-- Hero Section -->
-            <section class="hero">
-                <div class="container">
-                    <span class="badge">⏱️ Time-Based Analysis</span>
-                    <h1>Time-Income Analyzer</h1>
-                    <p>
-                        How much can you really earn? Enter your available time
-                        and we'll show you the best side hustles ranked by
-                        earning potential.
-                    </p>
-                </div>
-            </section>
-
             <!-- Analyzer Section -->
             <section class="analyzer-section">
                 <div class="container">
+                    <!-- Intro Content -->
+                    <div class="intro-content">
+                        <span class="ai-badge">⏱️ Time-Based Analysis</span>
+                        <h1>📊 Time-Income Analyzer</h1>
+                        <p class="intro-description">
+                            How much can you really earn? Enter your available
+                            time and we'll show you the <strong
+                                >best side hustles ranked by earning potential</strong
+                            >.
+                        </p>
+                    </div>
+
                     <div class="analyzer-card" id="analyzer-form">
                         <h2>📊 Analyze Your Earning Potential</h2>
 
@@ -195,6 +194,10 @@ const description =
                             </div>
                         </div>
 
+                        <ResultAffiliateCTA
+                            heading="💰 Ready to Start Earning?"
+                        />
+
                         <div class="hustle-list" id="hustle-list">
                             <!-- Results will be inserted here -->
                         </div>
@@ -206,10 +209,6 @@ const description =
                         >
                             🔄 Try Different Settings
                         </button>
-
-                        <ResultAffiliateCTA
-                            heading="💰 Ready to Start Earning?"
-                        />
                     </div>
                 </div>
             </section>
@@ -534,7 +533,7 @@ const description =
     }
 </script>
 
-<style>
+<style is:global>
     .analyzer-page {
         min-height: 100vh;
     }
@@ -545,33 +544,35 @@ const description =
         padding: 0 1.5rem;
     }
 
-    /* Hero */
-    .hero {
-        background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
-        color: white;
-        padding: 4rem 0;
+    /* Intro Content - 统一样式 */
+    .intro-content {
         text-align: center;
+        padding: 2rem 0;
     }
 
-    .badge {
+    .ai-badge {
         display: inline-block;
-        background: rgba(255, 255, 255, 0.15);
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
         padding: 0.5rem 1rem;
         border-radius: 50px;
         font-size: 0.9rem;
+        font-weight: 600;
         margin-bottom: 1rem;
     }
 
-    .hero h1 {
+    .intro-content h1 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
+        color: var(--text-primary);
     }
 
-    .hero p {
-        font-size: 1.1rem;
-        opacity: 0.9;
+    .intro-description {
+        font-size: 1.15rem;
+        color: var(--text-secondary);
         max-width: 600px;
-        margin: 0 auto;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
     }
 
     /* Analyzer Section */
@@ -758,6 +759,7 @@ const description =
         align-items: center;
         gap: 1rem;
         padding: 1.25rem;
+        background: white;
         border: 1px solid var(--border-color);
         border-radius: 12px;
         margin-bottom: 1rem;

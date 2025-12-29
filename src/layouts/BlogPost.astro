@@ -62,21 +62,15 @@ const { title, description, pubDate, updatedDate, heroImage, category, tags } =
             <SocialShare title={title} />
           </header>
 
-          {
-            heroImage && (
-              <div class="hero-image">
-                <img src={heroImage} alt="" />
-              </div>
-            )
-          }
+          <!-- Top CTA -->
+          <ArticleCTA variant="income" />
 
           <div class="prose">
             <slot />
           </div>
 
-          <!-- Article CTAs for monetization -->
+          <!-- Bottom CTA -->
           <ArticleCTA variant="tools" />
-          <ArticleCTA variant="income" />
         </div>
       </article>
     </main>
@@ -98,9 +92,8 @@ const { title, description, pubDate, updatedDate, heroImage, category, tags } =
 
   .article-header {
     text-align: center;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .article-meta {

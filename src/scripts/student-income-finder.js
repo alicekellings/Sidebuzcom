@@ -78,16 +78,14 @@ function renderQuestion() {
               ${question.options
             .map(
                 (opt) => `
-                <label class="option-card ${isSelected(savedAnswer, opt.value) ? "selected" : ""}">
-                  <input 
-                    type="${question.type === "multiple" ? "checkbox" : "radio"}" 
-                    name="q-${question.id}" 
-                    value="${opt.value}"
-                    ${isSelected(savedAnswer, opt.value) ? "checked" : ""}
-                  />
+                <button 
+                    type="button"
+                    class="option-card ${isSelected(savedAnswer, opt.value) ? "selected" : ""}" 
+                    data-value="${opt.value}"
+                >
                   <span class="option-icon">${opt.icon}</span>
                   <span class="option-label">${opt.label}</span>
-                </label>
+                </button>
               `,
             )
             .join("")}
@@ -96,34 +94,22 @@ function renderQuestion() {
           </div>
         `;
 
-    // Add event listeners
+    // Add click event listeners
     questionContainer
         .querySelectorAll(".option-card")
-        .forEach((card) => {
-            card.addEventListener("click", (e) => {
-                const input = card.querySelector('input');
+        .forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const value = btn.getAttribute("data-value");
 
                 if (question.type === "single") {
-                    // For single select: uncheck all others first
+                    // Single select: unselect all, then select clicked
                     questionContainer
                         .querySelectorAll(".option-card")
-                        .forEach((c) => {
-                            c.classList.remove("selected");
-                            c.querySelector('input').checked = false;
-                        });
-                    // Then select this one
-                    card.classList.add("selected");
-                    input.checked = true;
+                        .forEach((b) => b.classList.remove("selected"));
+                    btn.classList.add("selected");
                 } else {
-                    // For multiple select: toggle this one
-                    const isCurrentlySelected = card.classList.contains("selected");
-                    if (isCurrentlySelected) {
-                        card.classList.remove("selected");
-                        input.checked = false;
-                    } else {
-                        card.classList.add("selected");
-                        input.checked = true;
-                    }
+                    // Multiple select: toggle clicked button
+                    btn.classList.toggle("selected");
                 }
             });
         });
@@ -136,13 +122,13 @@ function isSelected(saved, value) {
 }
 
 function getSelectedAnswer(question) {
-    const inputs = questionContainer.querySelectorAll(
-        `input[name="q-${question.id}"]:checked`,
+    const selectedBtns = questionContainer.querySelectorAll(
+        `.option-card.selected`,
     );
     if (question.type === "multiple") {
-        return Array.from(inputs).map((i) => i.value);
+        return Array.from(selectedBtns).map((btn) => btn.getAttribute("data-value"));
     }
-    return inputs[0]?.value || null;
+    return selectedBtns[0]?.getAttribute("data-value") || null;
 }
 
 // Client-side rate limiting

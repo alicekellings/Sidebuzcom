@@ -108,6 +108,10 @@ import ResultAffiliateCTA from "../components/ResultAffiliateCTA.astro";
                                 perfect for you:
                             </p>
 
+                            <ResultAffiliateCTA
+                                heading="💰 Start Earning Today"
+                            />
+
                             <div id="hustles-container" class="hustles-grid">
                                 <!-- AI-generated hustles will be inserted here -->
                             </div>
@@ -127,10 +131,6 @@ import ResultAffiliateCTA from "../components/ResultAffiliateCTA.astro";
                                     🔄 Generate New Ideas
                                 </button>
                             </div>
-
-                            <ResultAffiliateCTA
-                                heading="💰 Start Earning Today"
-                            />
 
                             <div class="affiliate-disclosure">
                                 <p>
@@ -324,7 +324,7 @@ import ResultAffiliateCTA from "../components/ResultAffiliateCTA.astro";
     }
 </script>
 
-<style>
+<style is:global>
     .generator-section {
         min-height: 80vh;
         padding: 2rem 0;

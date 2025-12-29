@@ -271,6 +271,10 @@ import ResultAffiliateCTA from "../components/ResultAffiliateCTA.astro";
                                 could start:
                             </p>
 
+                            <ResultAffiliateCTA
+                                heading="🚀 Launch Your Business"
+                            />
+
                             <div
                                 id="businesses-container"
                                 class="businesses-grid"
@@ -293,10 +297,6 @@ import ResultAffiliateCTA from "../components/ResultAffiliateCTA.astro";
                                     🔄 Start Over
                                 </button>
                             </div>
-
-                            <ResultAffiliateCTA
-                                heading="🚀 Launch Your Business"
-                            />
 
                             <div class="affiliate-disclosure">
                                 <p>
@@ -579,7 +579,7 @@ import ResultAffiliateCTA from "../components/ResultAffiliateCTA.astro";
     }
 </script>
 
-<style>
+<style is:global>
     .business-section {
         min-height: 80vh;
         padding: 2rem 0;
