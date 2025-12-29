@@ -8,6 +8,7 @@ import SocialShare from "../components/SocialShare.astro";
 import ReadingProgress from "../components/ReadingProgress.astro";
 import BackToTop from "../components/BackToTop.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
+import ArticleCTA from "../components/ArticleCTA.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -72,6 +73,10 @@ const { title, description, pubDate, updatedDate, heroImage, category, tags } =
           <div class="prose">
             <slot />
           </div>
+
+          <!-- Article CTAs for monetization -->
+          <ArticleCTA variant="tools" />
+          <ArticleCTA variant="income" />
         </div>
       </article>
     </main>

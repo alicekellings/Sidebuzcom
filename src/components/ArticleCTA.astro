@@ -1,0 +1,255 @@
+---
+// In-article CTA banner for monetization
+// Displays after a certain amount of content
+import { affiliates } from "../data/affiliates.js";
+
+interface Props {
+    variant?: "default" | "tools" | "income";
+}
+
+const { variant = "default" } = Astro.props;
+
+// Select featured affiliates for display
+const featuredAffiliates = [
+    affiliates.shopify,
+    affiliates.educative,
+    affiliates.livechatjobs,
+].filter(Boolean);
+---
+
+<div class="article-cta">
+    {
+        variant === "tools" && (
+            <div class="cta-box tools-cta">
+                <div class="cta-icon">🛠️</div>
+                <div class="cta-content">
+                    <h3>Ready to Start Your Side Hustle?</h3>
+                    <p>
+                        Take our free 2-minute quiz and get personalized income
+                        recommendations.
+                    </p>
+                    <a href="/student-income-finder" class="cta-btn primary">
+                        Find Your Best Side Hustle →
+                    </a>
+                </div>
+            </div>
+        )
+    }
+
+    {
+        variant === "income" && (
+            <div class="cta-box income-cta">
+                <div class="cta-header">
+                    <span class="cta-badge">💰 Top-Rated Platforms</span>
+                    <h3>Start Earning Today</h3>
+                </div>
+                <div class="affiliate-grid">
+                    {featuredAffiliates.map((affiliate) => (
+                        <a
+                            href={affiliate.url}
+                            class="affiliate-card"
+                            target="_blank"
+                            rel="noopener sponsored"
+                        >
+                            <span class="affiliate-name">{affiliate.name}</span>
+                            <span class="affiliate-earning">
+                                {affiliate.earnings}
+                            </span>
+                            <span class="affiliate-cta">{affiliate.cta} →</span>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        )
+    }
+
+    {
+        variant === "default" && (
+            <div class="cta-box default-cta">
+                <div class="cta-emoji">💡</div>
+                <div class="cta-text">
+                    <strong>Want personalized side hustle ideas?</strong>
+                    <span>
+                        Try our free AI-powered tools to find opportunities that
+                        match your skills.
+                    </span>
+                </div>
+                <a href="/tools" class="cta-btn secondary">
+                    Explore Tools →
+                </a>
+            </div>
+        )
+    }
+</div>
+
+<style>
+    .article-cta {
+        margin: 2.5rem 0;
+    }
+
+    .cta-box {
+        border-radius: 16px;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        border: 1px solid #bae6fd;
+    }
+
+    /* Tools CTA */
+    .tools-cta {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+        border-color: #c4b5fd;
+    }
+
+    .cta-icon {
+        font-size: 3rem;
+    }
+
+    .cta-content h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+        color: #5b21b6;
+    }
+
+    .cta-content p {
+        margin: 0 0 1rem;
+        color: #6b7280;
+    }
+
+    .cta-btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .cta-btn.primary {
+        background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        color: white;
+    }
+
+    .cta-btn.primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+    }
+
+    .cta-btn.secondary {
+        background: var(--accent-primary);
+        color: white;
+    }
+
+    .cta-btn.secondary:hover {
+        background: #1d4ed8;
+    }
+
+    /* Income CTA */
+    .income-cta {
+        background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+        border-color: #6ee7b7;
+    }
+
+    .cta-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: #059669;
+        color: white;
+        font-size: 0.8rem;
+        border-radius: 50px;
+        margin-bottom: 0.5rem;
+    }
+
+    .cta-header h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        color: #065f46;
+    }
+
+    .affiliate-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+
+    .affiliate-card {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background: white;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1px solid #d1fae5;
+    }
+
+    .affiliate-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .affiliate-name {
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.25rem;
+    }
+
+    .affiliate-earning {
+        font-size: 0.85rem;
+        color: #059669;
+        margin-bottom: 0.5rem;
+    }
+
+    .affiliate-cta {
+        font-size: 0.85rem;
+        color: var(--accent-primary);
+        font-weight: 500;
+    }
+
+    /* Default CTA */
+    .default-cta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .cta-emoji {
+        font-size: 2rem;
+    }
+
+    .cta-text {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .cta-text strong {
+        display: block;
+        color: #1e40af;
+        margin-bottom: 0.25rem;
+    }
+
+    .cta-text span {
+        color: #6b7280;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+        .tools-cta {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .default-cta {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
