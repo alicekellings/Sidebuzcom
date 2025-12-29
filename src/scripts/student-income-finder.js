@@ -100,15 +100,31 @@ function renderQuestion() {
     questionContainer
         .querySelectorAll(".option-card")
         .forEach((card) => {
-            card.addEventListener("click", () => {
+            card.addEventListener("click", (e) => {
+                const input = card.querySelector('input');
+
                 if (question.type === "single") {
+                    // For single select: uncheck all others first
                     questionContainer
                         .querySelectorAll(".option-card")
-                        .forEach((c) =>
-                            c.classList.remove("selected"),
-                        );
+                        .forEach((c) => {
+                            c.classList.remove("selected");
+                            c.querySelector('input').checked = false;
+                        });
+                    // Then select this one
+                    card.classList.add("selected");
+                    input.checked = true;
+                } else {
+                    // For multiple select: toggle this one
+                    const isCurrentlySelected = card.classList.contains("selected");
+                    if (isCurrentlySelected) {
+                        card.classList.remove("selected");
+                        input.checked = false;
+                    } else {
+                        card.classList.add("selected");
+                        input.checked = true;
+                    }
                 }
-                card.classList.toggle("selected");
             });
         });
 }

@@ -1,0 +1,123 @@
+---
+// Result page affiliate banner for tool pages
+import { affiliates } from "../data/affiliates.js";
+
+interface Props {
+    heading?: string;
+}
+
+const { heading = "🚀 Ready to Get Started?" } = Astro.props;
+
+// Select 3 featured affiliates
+const featuredAffiliates = [
+    { ...affiliates.shopify, tagline: "Start an Online Store" },
+    { ...affiliates.educative, tagline: "Learn New Skills" },
+    { ...affiliates.livechatjobs, tagline: "Work from Home" },
+].filter((a) => a && a.url);
+---
+
+<div class="result-affiliate-cta">
+    <h3>{heading}</h3>
+    <p class="cta-subtitle">
+        Check out these popular platforms to start earning:
+    </p>
+
+    <div class="affiliate-cards">
+        {
+            featuredAffiliates.map((affiliate) => (
+                <a
+                    href={affiliate.url}
+                    class="affiliate-card-mini"
+                    target="_blank"
+                    rel="noopener sponsored"
+                >
+                    <span class="card-tagline">{affiliate.tagline}</span>
+                    <span class="card-name">{affiliate.name}</span>
+                    <span class="card-cta">{affiliate.cta} →</span>
+                </a>
+            ))
+        }
+    </div>
+
+    <p class="disclosure">
+        <small
+            >Some links are affiliate links. We may earn a commission at no
+            extra cost to you.</small
+        >
+    </p>
+</div>
+
+<style>
+    .result-affiliate-cta {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        border-radius: 16px;
+        border: 2px solid #f59e0b;
+        text-align: center;
+    }
+
+    .result-affiliate-cta h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+        color: #92400e;
+    }
+
+    .cta-subtitle {
+        color: #78350f;
+        margin-bottom: 1.25rem;
+    }
+
+    .affiliate-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .affiliate-card-mini {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background: white;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1px solid #fcd34d;
+    }
+
+    .affiliate-card-mini:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .card-tagline {
+        font-size: 0.75rem;
+        color: #d97706;
+        margin-bottom: 0.25rem;
+    }
+
+    .card-name {
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-cta {
+        font-size: 0.85rem;
+        color: #f59e0b;
+        font-weight: 600;
+    }
+
+    .disclosure {
+        margin: 0;
+        color: #92400e;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 500px) {
+        .affiliate-cards {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
