@@ -1,0 +1,88 @@
+---
+// Back to Top Button - floating button to scroll back to top
+---
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+        <path d="m18 15-6-6-6 6"></path>
+    </svg>
+</button>
+
+<script>
+    const backToTop = document.getElementById("back-to-top");
+
+    if (backToTop) {
+        function toggleButton() {
+            if (window.scrollY > 300) {
+                backToTop.classList.add("visible");
+            } else {
+                backToTop.classList.remove("visible");
+            }
+        }
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+
+        window.addEventListener("scroll", toggleButton, { passive: true });
+        toggleButton();
+    }
+</script>
+
+<style>
+    .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--accent-primary);
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        z-index: 100;
+    }
+
+    .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+        background: #1d4ed8;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+    }
+
+    @media (max-width: 600px) {
+        .back-to-top {
+            bottom: 1rem;
+            right: 1rem;
+            width: 44px;
+            height: 44px;
+        }
+    }
+</style>

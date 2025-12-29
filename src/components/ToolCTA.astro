@@ -1,0 +1,116 @@
+---
+// Tool CTA Card - shown at the end of blog posts before related articles
+---
+
+<section class="tool-cta-section">
+    <div class="tool-cta-card">
+        <div class="tool-cta-icon">🚀</div>
+        <div class="tool-cta-content">
+            <h3>Ready to Find Your Perfect Side Hustle?</h3>
+            <p>
+                Use our free AI-powered tools to discover income opportunities
+                tailored to your skills and schedule.
+            </p>
+            <div class="tool-cta-buttons">
+                <a href="/student-income-finder" class="tool-btn primary">
+                    🎓 Student Income Finder
+                </a>
+                <a href="/ai-hustle-generator" class="tool-btn secondary">
+                    💡 AI Hustle Generator
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .tool-cta-section {
+        margin: 2.5rem 0;
+        padding: 0;
+    }
+
+    .tool-cta-card {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.75rem;
+        background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+        border: 2px solid #dbeafe;
+        border-radius: 16px;
+        align-items: flex-start;
+    }
+
+    .tool-cta-icon {
+        font-size: 2.5rem;
+        flex-shrink: 0;
+    }
+
+    .tool-cta-content h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+        color: var(--text-primary);
+        font-weight: 700;
+    }
+
+    .tool-cta-content p {
+        margin: 0 0 1rem;
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .tool-cta-buttons {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .tool-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .tool-btn.primary {
+        background: var(--accent-primary);
+        color: white;
+    }
+
+    .tool-btn.primary:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+    }
+
+    .tool-btn.secondary {
+        background: white;
+        color: var(--accent-primary);
+        border: 1px solid var(--accent-primary);
+    }
+
+    .tool-btn.secondary:hover {
+        background: var(--accent-primary);
+        color: white;
+    }
+
+    @media (max-width: 600px) {
+        .tool-cta-card {
+            flex-direction: column;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .tool-cta-buttons {
+            justify-content: center;
+        }
+
+        .tool-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+</style>

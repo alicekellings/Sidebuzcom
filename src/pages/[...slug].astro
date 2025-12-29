@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../layouts/BlogPost.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
+import ToolCTA from "../components/ToolCTA.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -19,6 +20,7 @@ const currentSlug = post.id.replace(".md", "");
 
 <BlogPost {...post.data}>
   <Content />
+  <ToolCTA />
   <RelatedPosts
     currentSlug={currentSlug}
     currentCategory={post.data.category}

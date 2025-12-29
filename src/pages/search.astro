@@ -1,0 +1,318 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import { getCollection } from "astro:content";
+
+// Get all posts for client-side search
+const allPosts = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Prepare search data for client-side
+const searchData = allPosts.map((post) => ({
+    title: post.data.title,
+    description: post.data.description || "",
+    category: post.data.category || "",
+    url: `/${post.id.replace(".md", "")}/`,
+    pubDate: post.data.pubDate.toISOString().split("T")[0],
+}));
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title="Search Articles | SideBuz"
+            description="Search for articles about side hustles, passive income, and making money online."
+        />
+        <link rel="stylesheet" href="/src/styles/global.css" />
+    </head>
+    <body>
+        <Header />
+
+        <main>
+            <section class="search-page">
+                <div class="container">
+                    <h1>🔍 Search Articles</h1>
+
+                    <!-- Search Form -->
+                    <form class="search-form" id="search-form">
+                        <input
+                            type="text"
+                            name="q"
+                            id="search-input"
+                            placeholder="Search articles..."
+                            autofocus
+                        />
+                        <button type="submit">Search</button>
+                    </form>
+
+                    <!-- Results Info -->
+                    <div
+                        class="search-info"
+                        id="search-info"
+                        style="display:none;"
+                    >
+                    </div>
+
+                    <!-- Results List -->
+                    <ul class="results-list" id="results-list"></ul>
+
+                    <!-- Placeholder -->
+                    <div class="search-placeholder" id="search-placeholder">
+                        <p>
+                            Enter a keyword to search through {allPosts.length} articles.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <Footer />
+    </body>
+</html>
+
+<script define:vars={{ searchData }}>
+    const postsData = searchData;
+    const input = document.getElementById("search-input");
+    const form = document.getElementById("search-form");
+    const resultsList = document.getElementById("results-list");
+    const searchInfo = document.getElementById("search-info");
+    const placeholder = document.getElementById("search-placeholder");
+
+    function formatDate(dateStr) {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+        });
+    }
+
+    function search(query) {
+        if (!query || query.length < 2) {
+            resultsList.innerHTML = "";
+            searchInfo.style.display = "none";
+            placeholder.style.display = "block";
+            return;
+        }
+
+        placeholder.style.display = "none";
+        const lowerQuery = query.toLowerCase();
+
+        const matches = postsData.filter(
+            (post) =>
+                post.title.toLowerCase().includes(lowerQuery) ||
+                post.description.toLowerCase().includes(lowerQuery) ||
+                post.category.toLowerCase().includes(lowerQuery),
+        );
+
+        if (matches.length === 0) {
+            searchInfo.innerHTML = `<p>No articles found for "<strong>${query}</strong>"</p>`;
+            searchInfo.style.display = "block";
+            resultsList.innerHTML = "";
+            return;
+        }
+
+        searchInfo.innerHTML = `<p>Found <strong>${matches.length}</strong> articles for "<strong>${query}</strong>"</p>`;
+        searchInfo.style.display = "block";
+
+        resultsList.innerHTML = matches
+            .map(
+                (post) => `
+            <li class="result-item">
+                <a href="${post.url}">
+                    <article>
+                        <div class="result-meta">
+                            ${post.category ? `<span class="result-category">${post.category}</span>` : ""}
+                            <span class="result-date">${formatDate(post.pubDate)}</span>
+                        </div>
+                        <h2 class="result-title">${post.title}</h2>
+                        ${post.description ? `<p class="result-desc">${post.description}</p>` : ""}
+                    </article>
+                </a>
+            </li>
+        `,
+            )
+            .join("");
+    }
+
+    // Handle form submit
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const query = input.value.trim();
+        if (query) {
+            // Update URL without page reload
+            const url = new URL(window.location.href);
+            url.searchParams.set("q", query);
+            window.history.pushState({}, "", url);
+            search(query);
+        }
+    });
+
+    // Check URL for initial query on page load
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get("q");
+    if (initialQuery) {
+        input.value = initialQuery;
+        search(initialQuery);
+    }
+</script>
+
+<style>
+    .search-page {
+        padding: 3rem 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--text-primary);
+    }
+
+    .search-form {
+        display: flex;
+        gap: 0;
+        margin-bottom: 2rem;
+    }
+
+    .search-form input {
+        flex: 1;
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+        border: 2px solid var(--border-color);
+        border-radius: 12px 0 0 12px;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+    }
+
+    .search-form input:focus {
+        outline: none;
+        border-color: var(--accent-primary);
+    }
+
+    .search-form button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        background: var(--accent-primary);
+        color: white;
+        border: none;
+        border-radius: 0 12px 12px 0;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    .search-form button:hover {
+        background: #1d4ed8;
+    }
+
+    .search-info {
+        padding: 1rem;
+        background: var(--bg-secondary);
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+
+    .search-info p {
+        margin: 0;
+        color: var(--text-secondary);
+    }
+
+    .results-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .result-item {
+        border-bottom: 1px solid var(--border-color);
+        padding: 1.5rem 0;
+    }
+
+    .result-item:last-child {
+        border-bottom: none;
+    }
+
+    .result-item a {
+        text-decoration: none;
+        display: block;
+    }
+
+    .result-item:hover {
+        background: var(--bg-secondary);
+        margin: 0 -1rem;
+        padding: 1.5rem 1rem;
+        border-radius: 8px;
+    }
+
+    .result-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .result-category {
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        background: #dbeafe;
+        color: #1e40af;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 50px;
+    }
+
+    .result-date {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .result-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin: 0 0 0.5rem;
+        line-height: 1.4;
+    }
+
+    .result-item:hover .result-title {
+        color: var(--accent-primary);
+    }
+
+    .result-desc {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .search-placeholder {
+        text-align: center;
+        padding: 3rem 1rem;
+        color: var(--text-muted);
+    }
+
+    @media (max-width: 600px) {
+        .search-form {
+            flex-direction: column;
+        }
+
+        .search-form input {
+            border-radius: 12px;
+            margin-bottom: 0.5rem;
+        }
+
+        .search-form button {
+            border-radius: 12px;
+        }
+    }
+</style>

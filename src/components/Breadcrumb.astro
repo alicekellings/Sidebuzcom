@@ -1,0 +1,86 @@
+---
+// Breadcrumb Navigation Component
+interface Props {
+    title: string;
+    category?: string;
+}
+
+const { title, category } = Astro.props;
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/blog/">Blog</a>
+        </li>
+        {
+            category && (
+                <li>
+                    <a
+                        href={`/category/${category.toLowerCase().replace(/\s+/g, "-")}/`}
+                    >
+                        {category}
+                    </a>
+                </li>
+            )
+        }
+        <li class="current">
+            <span
+                >{
+                    title.length > 50 ? title.substring(0, 50) + "..." : title
+                }</span
+            >
+        </li>
+    </ol>
+</nav>
+
+<style>
+    .breadcrumb {
+        margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb ol {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .breadcrumb li {
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumb li:not(:last-child)::after {
+        content: "›";
+        margin-left: 0.5rem;
+        color: var(--text-muted);
+    }
+
+    .breadcrumb a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+        color: var(--accent-primary);
+    }
+
+    .breadcrumb .current span {
+        color: var(--text-muted);
+    }
+
+    @media (max-width: 600px) {
+        .breadcrumb ol {
+            font-size: 0.8rem;
+        }
+    }
+</style>
