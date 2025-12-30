@@ -1,5 +1,5 @@
 ---
-title: '5 Legit Online Jobs for Students That Pay Weekly (2025 Guide)'
+title: "5 Legit Online Jobs for Students That Pay Weekly (2025 Guide)"
 description: 'Stop waiting for payday. Here are 5 verified online jobs perfect for students that offer weekly payouts. Legit, tested, and flexible.'
 pubDate: '2025-01-03'
 heroImage: '/blog-placeholder-4.jpg'
@@ -12,7 +12,7 @@ The only thing worse than being broke is waiting two weeks for a paycheck.
 
 When you're a student, expenses pop up out of nowhere. A surprise textbook fee ($150), a laptop repair, or just... wanting to go out on a Friday night.
 
-I’ve spent the last three years testing online income streams. Most are trash. Some are okay. But a few are actual gold mines that pay out **weekly**.
+I've spent the last three years testing online income streams. Most are trash. Some are okay. But a few are actual gold mines that pay out **weekly**.
 
 If you need cash flow *now*, not next month, this list is for you. These are vetted, legit, and don't require 10 years of experience.
 
@@ -34,13 +34,13 @@ If you can write a decent essay, you can get paid.
 **Pay Potential:** $15 - $25/hour  
 **Difficulty:** Easy
 
-Are you the person who actually organizes their Google Calendar? Do you reply to emails promptly? You’re already qualified.
+Are you the person who actually organizes their Google Calendar? Do you reply to emails promptly? You're already qualified.
 
 Business owners are overwhelmed. They need someone to manage inboxes, schedule meetings, and handle data entry.
 
 *   **The Gig:** You log in for a few hours a day, clear a task list, and log off.
 *   **Where to find work:** **[Virtual Assistant Jobs](https://sidebuz.com/out/virtualassistant)** is a solid database for these remote roles. It connects you with employers specifically looking for remote help.
-*   **The Perk:** It’s steady. Unlike writing where you constantly pitch, a VA job is usually ongoing.
+*   **The Perk:** It's steady. Unlike writing where you constantly pitch, a VA job is usually ongoing.
 
 ## 3. Social Media Management (Get Paid to Scroll)
 
