@@ -130,6 +130,16 @@ export const affiliates = {
         description: "Get paid to manage Facebook, Twitter and YouTube accounts",
         category: "jobs",
         logo: "/images/affiliates/clickbank.svg"
+    },
+    "udemy": {
+        id: "udemy",
+        name: "Udemy",
+        url: "https://trk.udemy.com/JK9kMQ",
+        cta: "Browse Courses",
+        payout: "15%",
+        description: "Learn high-income skills (coding, design, marketing) to boost your side hustle earnings.",
+        category: "education",
+        logo: "/images/affiliates/udemy.svg"
     }
 };
 

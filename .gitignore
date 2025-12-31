@@ -27,6 +27,6 @@ pnpm-debug.log*
 .idea/
 
 # Internal documentation (contains sensitive affiliate/strategy info)
-/*.md
+# /*.md
 关键字列表.txt
 quick-push.ps1
