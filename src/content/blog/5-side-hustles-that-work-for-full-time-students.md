@@ -1,7 +1,7 @@
 ---
 title: "5 Side Hustles That Actually Work for Full-Time Students (Tested)"
 description: "Real side hustles that work around a full course load. Practical ways to make $300-$1000/month as a student."
-pubDate: "2025-12-28"
+pubDate: "2024-12-28"
 heroImage: "/blog-placeholder-4.jpg"
 category: "side-hustle"
 ---

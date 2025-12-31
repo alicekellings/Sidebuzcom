@@ -1,7 +1,7 @@
 ---
 title: "10_High_-_Paying_Side_Gigs_for_Students__$30+_Hr"
 description: "I remember back in my college days, I was constantly strapped for cash."
-pubDate: "2025-04-19"
+pubDate: "2024-04-19"
 category: "Lifestyle"
 
 ---

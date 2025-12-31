@@ -1,7 +1,7 @@
 ---
 title: "Your Ultimate Guide to Feeling Refreshed"
 description: "Love a mid-afternoon nap?"
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Health"
 
 ---
@@ -18,7 +18,7 @@ It bears repeating: our current lifestyle habits aren’t doing us any favors. W
 
 ## How the Circadian Rhythm Works
 
-As mentioned, our circadian rhythm influences everything from our eating habits to our body temp, hormone release and digestion. It’s our internal timekeeper. The circadian rhythm maintains our sleep-wake cycle, helping us fall asleep and wake up in the morning. While it differs from a woman’s infradian rhythm (also known as our ‘second clock’), the circadian rhythm deserves just as much love and attention as any other facet of our self-care routine. This rhythm ebbs and flows during the day, but it is best supported by sleep-promoting habits.
+As mentioned, our circadian rhythm influences everything from our eating habits to our body temp, hormone release and digestion. It’s our internal timekeeper. The circadian rhythm maintains our sleep-wake cycle, helping us fall asleep and wake up in the morning. While it differs from a woman’s infradian rhythm (also known as our ‘second clock�?, the circadian rhythm deserves just as much love and attention as any other facet of our self-care routine. This rhythm ebbs and flows during the day, but it is best supported by sleep-promoting habits.
 
 *Image by Michelle Nash*
 
@@ -88,7 +88,7 @@ A study conducted by the National Sleep Foundation found that a 40-minute nap
 
 Speaking of napping at work, did you know that a weekday nap is encouraged in countries around the world? For example, there is the tradition of the *siesta* in Spain. In China, people take an hour break midday to rest. In Japan, *inemuri* means napping while present and is seen as a sign of hard work.
 
-In the United States, the [CDC](https://www.cdc.gov/workplacehealthpromotion/initiatives/resource-center/pdf/WHRC-Brief-Sleep-508.pdf) recommends dedicated physical space—as well as scheduling—to allow for napping. Many organizations have already incorporated nap rooms into their offices. Google, NASA, and Ben & Jerry’s support napping by providing specific spaces like “napping pods” for their employees.
+In the United States, the [CDC](https://www.cdc.gov/workplacehealthpromotion/initiatives/resource-center/pdf/WHRC-Brief-Sleep-508.pdf) recommends dedicated physical space—as well as scheduling—to allow for napping. Many organizations have already incorporated nap rooms into their offices. Google, NASA, and Ben & Jerry’s support napping by providing specific spaces like “napping pods�?for their employees.
 
 *Image by **Teal Thomsen*
 
@@ -98,11 +98,11 @@ Ready to take the perfect power nap and wake up feeling refreshed? Follow these 
 
  	- **Get the time right. **The circadian rhythm is low between 2-4 p.m. To improve your alertness, productivity, memory, and function, aim to take your nap in the early-to-mid afternoon. There are many activities you can do to beat the afternoon slump, but a quick power nap could be the golden ticket.
 
- 	- **Recharge with the ideal duration.** One of the keys to successful power napping is its length. Too much takes you into deep sleep mode, leaving you tired and groggy afterward. Too little is not enough. Experts explain that the maximum power nap recharge is achieved by going from stage one sleep (that lovely ‘drifting off’ feeling) to stage two (slowdown of brain activity). In most people, that’s 15-30 minutes.
+ 	- **Recharge with the ideal duration.** One of the keys to successful power napping is its length. Too much takes you into deep sleep mode, leaving you tired and groggy afterward. Too little is not enough. Experts explain that the maximum power nap recharge is achieved by going from stage one sleep (that lovely ‘drifting off�?feeling) to stage two (slowdown of brain activity). In most people, that’s 15-30 minutes.
 
  	- **Create a dark environment.** Just like ideal nighttime sleep comes from a cold, dark room, so does your afternoon nap. The fewer intrusive sounds, the better.
 
- 	- **Turn your phone on ‘Do Not Disturb.’ **Because we all know how easy it so to get distracted by messages, alerts, etc., block your calendar during nap time and silence your messages. Trust that you can clock 15-30 minutes of rest without tending to other people’s needs. In fact, I bet you’ll tend to their needs with *extra *enthusiasm after your power nap.
+ 	- **Turn your phone on ‘Do Not Disturb.’�?*Because we all know how easy it so to get distracted by messages, alerts, etc., block your calendar during nap time and silence your messages. Trust that you can clock 15-30 minutes of rest without tending to other people’s needs. In fact, I bet you’ll tend to their needs with *extra *enthusiasm after your power nap.
 
 
 

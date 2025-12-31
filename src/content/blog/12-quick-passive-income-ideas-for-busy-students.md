@@ -1,7 +1,7 @@
 ---
 title: "12 Quick Passive Income Ideas for Busy Students"
 description: "I remember back in my college days, constantly swamped with classes, assignments, and extracurriculars."
-pubDate: "2025-04-19"
+pubDate: "2024-04-19"
 category: "Lifestyle"
 
 ---

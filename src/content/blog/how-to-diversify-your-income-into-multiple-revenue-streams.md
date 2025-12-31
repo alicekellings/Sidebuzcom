@@ -1,7 +1,7 @@
 ---
 title: "How to Diversify Your Income Into Multiple Revenue Streams"
 description: "This as-told-to essay is based on a conversation with Grace Ryu, a 23-year-old content creator based in Houston."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Make Money Online"
 tags: ["Business Ideas", "Business News", "News and Trends", "passive income", "personal finance", "Side Hustle"]
 ---
@@ -12,7 +12,7 @@ tags: ["Business Ideas", "Business News", "News and Trends", "passive income", "
 
 I quit my tech job in March 2023 to explore other income streams. My 9-5 took up too much of my time, and I wanted to focus on ways to make money while I was sleeping or traveling.
 
-Chasing different income streams aligns with my personality — it satisfies my desire to explore and try as much as possible. If I grow bored with one area, I can shift my focus to another, and if one stream isn’t that profitable, I have others to fall back on.
+Chasing different income streams aligns with my personality �?it satisfies my desire to explore and try as much as possible. If I grow bored with one area, I can shift my focus to another, and if one stream isn’t that profitable, I have others to fall back on.
 
 Here’s a breakdown of my eight income streams, with earnings, difficulty level, and time spent each week:
 
@@ -90,11 +90,11 @@ I earn about $6,000 to $8,000 a month from UGC. It takes around eight hours a we
 
 I got into pet sitting as a side gig while working in tech. I started on Rover, an app that links pet owners with sitters. Setting up a profile and passing a background check is quick, and you can start earning as soon as you’re booked.
 
-It’s ideal for remote workers like me — getting paid to hang out with cute animals is great, and I can still manage other tasks, like checking up on my picnic business, answering emails, or creating content.
+It’s ideal for remote workers like me �?getting paid to hang out with cute animals is great, and I can still manage other tasks, like checking up on my picnic business, answering emails, or creating content.
 
 In January 2024, I was pet-sitting almost every day, and I enjoyed it because it was such a relaxing job. The only downside is I didn’t get to travel as much since I needed to stay with the pets.
 
-It’s an extremely easy side hustle if you understand pet care and behavior. Pets are super easy to work with as long as they’re not puppies — puppies are more work.
+It’s an extremely easy side hustle if you understand pet care and behavior. Pets are super easy to work with as long as they’re not puppies �?puppies are more work.
 
 ## **6. Airbnb arbitrage**
 
@@ -104,13 +104,13 @@ It’s an extremely easy side hustle if you understand pet care and behavior. Pe
 
 ### **Lucrative rating: 4/10**
 
-Airbnb arbitrage is my least favorite income stream — I may be letting go of this soon because the Airbnb market isn’t as hot as it used to be a few years ago.
+Airbnb arbitrage is my least favorite income stream �?I may be letting go of this soon because the Airbnb market isn’t as hot as it used to be a few years ago.
 
 How it works is I rent a property from a landlord for $1,700, for example, and once my business partner and I get the green light to use it as a short-term or mid-term rental, we list the property on platforms like Airbnb and VRBO. We’re tenants but act more like property managers, and we then earn profits from these listings.
 
 After splitting earnings with my business partner, my net profit is around $600 per month. Since we focus primarily on mid-term stays, which require less frequent turnovers, my partner and I spend about five to six hours monthly on maintenance and cleaning, typically at the end of each stay.
 
-It’s my least favorite side hustle because the financial risk is the highest — you have to accommodate guest needs, and the work is not enjoyable either. After monthly expenses, I don’t think the payout is enough to justify the effort.
+It’s my least favorite side hustle because the financial risk is the highest �?you have to accommodate guest needs, and the work is not enjoyable either. After monthly expenses, I don’t think the payout is enough to justify the effort.
 
 ## **7. Selling digital products**
 
@@ -136,7 +136,7 @@ Anyone with enough knowledge about a specific topic can create an e-book or dig
 
 I nanny for a family that flies me from Houston to New York three or four times a year. I stay for two to three weeks and get paid $1,200 a week.
 
-My day-to-day is very simple — I take the girls to school in the morning, and when I come back, I can make content or go outside and explore the city. When the girls come home, I eat dinner, play with them, and then put them to sleep.
+My day-to-day is very simple �?I take the girls to school in the morning, and when I come back, I can make content or go outside and explore the city. When the girls come home, I eat dinner, play with them, and then put them to sleep.
 
 The families I babysit for in Houston and the family I nanny for in New York are all amazing to me and compensate me generously, which makes my job enjoyable and easy. The hardest part is when the kids are sick because I have to be more hands-on. Aside from that, once you become familiar with their routines, it’s super chill.
 

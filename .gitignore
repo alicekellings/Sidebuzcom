@@ -30,3 +30,7 @@ pnpm-debug.log*
 # /*.md
 关键字列表.txt
 quick-push.ps1
+
+# media files
+*.mp4
+*.mov

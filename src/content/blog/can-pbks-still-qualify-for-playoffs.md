@@ -1,7 +1,7 @@
 ---
 title: "Can PBKS still qualify for playoffs?"
 description: "Punjab Kings PBKS will take on Rajasthan Royals RR in match number 66 of the Indian Premier League IPL 2023 at the Himachal Pradesh Cricket Association Stadi..."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Sports"
 
 ---
@@ -9,7 +9,7 @@ category: "Sports"
 Punjab Kings (PBKS) will take on Rajasthan Royals (RR) in match number 66 of the Indian Premier League (IPL) 2023 at the Himachal Pradesh Cricket Association Stadium in Dharamsala on Friday, May 19. This will be the last league-stage game for both teams in the tournament and a must-win encounter at that.
 
 
-Punjab Kings have blown hot and cold in IPL 2023 in what has been another disappointing year for them. They began their campaign on an impressive note with close wins over Kolkata Knight Riders (seven runs – D/L method) and Rajasthan Royals (five runs). However, things have mostly gone downhill for them since then.
+Punjab Kings have blown hot and cold in IPL 2023 in what has been another disappointing year for them. They began their campaign on an impressive note with close wins over Kolkata Knight Riders (seven runs �?D/L method) and Rajasthan Royals (five runs). However, things have mostly gone downhill for them since then.
 
 
 PBKS have only won two of their last six matches in IPL 2023. Some hopes were raised of a revival when they beat Delhi Capitals (DC) by 31 runs in the away game. However, in their last match, they went down to the same opponents by 15 runs at the Himachal Pradesh Cricket Association Stadium in Dharamsala. The loss dealt a massive blow to their hopes of qualifying for the playoffs.

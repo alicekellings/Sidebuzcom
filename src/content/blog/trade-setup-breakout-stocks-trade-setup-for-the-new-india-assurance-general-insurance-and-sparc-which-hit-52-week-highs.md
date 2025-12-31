@@ -1,7 +1,7 @@
 ---
 title: "Trade Setup: Breakout Stocks: Trade setup for The New India Assurance, General Insurance and SPARC which hit 52-week highs"
 description: "Indian market closed flat with a negative bias for the second consecutive day in a row on Friday."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Blog"
 
 ---
@@ -22,7 +22,7 @@ We spoke to an analyst on how one should look at these stocks the next trading d
 
 The stock has given a strong breakout above Feb 2021 highs with a sharp rise in volumes. With the price rising over 20% in a single day, the overall momentum looks strong.
 
-The stock has a minor resistance at 219 â€“ above which the current up-move can accelerate towards 250 and 266.
+The stock has a minor resistance at 219 â€?above which the current up-move can accelerate towards 250 and 266.
 
 If the stock re-tests 195 to 200 zone; it would offer a good buy opportunity with a stop loss below 187.50 for targets of 250 and 266.
 

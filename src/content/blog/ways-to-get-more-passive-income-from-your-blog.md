@@ -1,7 +1,7 @@
 ---
 title: "Ways to Get More Passive Income from Your Blog"
 description: "Your blog could be more than just a place to write down your thoughts and opinions or promote your brand; instead, you can use it as a tool to make passive i..."
-pubDate: "2025-04-13"
+pubDate: "2024-04-13"
 category: "Blogging Tips"
 tags: ["blogging tips", "make money online", "passive income"]
 ---
@@ -22,7 +22,7 @@ So why not go a step further and write up a short e-book that you can then promo
 
 Whether you are a blogging expert on public health policy, thanks to your masters of public health from a reputable university, or you are known for your ability to teach others how to create art online with Adobe programs, all you have to do is put your e-book on your blog and wait for the sales to come in.
 
-You may want to read: How to Start a Blog (And Make Money With It) – Step by Step Guide
+You may want to read: How to Start a Blog (And Make Money With It) �?Step by Step Guide
 
 ## Sell Ad Space on Your Blog
 

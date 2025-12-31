@@ -1,7 +1,7 @@
 ---
 title: "How to Find Legit Side Hustles Without Getting Scammed (Student Guide)"
 description: "Tired of fake money-making schemes? Learn how to spot scams and find real side hustles that actually pay. A student's honest guide."
-pubDate: "2025-12-31"
+pubDate: "2025-12-31T11:00:00"
 heroImage: "/blog-placeholder-2.jpg"
 category: "side-hustle"
 ---

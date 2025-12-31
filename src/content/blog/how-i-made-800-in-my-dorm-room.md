@@ -1,7 +1,7 @@
 ---
 title: "How I Made $800/mo in My Dorm Room (No Scams, No Surveys)"
 description: 'Detailed breakdown of how I started making $800 a month from my college dorm room without falling for scams or wasting time on surveys.'
-pubDate: '2025-01-02'
+pubDate: "2024-01-02'
 heroImage: '/blog-placeholder-2.jpg'
 category: 'make-money-online'
 tags: ['side-hustle', 'students', 'remote-work']

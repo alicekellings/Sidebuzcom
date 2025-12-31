@@ -1,7 +1,7 @@
 ---
 title: "There’s No Better Time to Start a Passive Income Business than Now"
 description: "The concept of passive income has been around forever."
-pubDate: "2025-04-13"
+pubDate: "2024-04-13"
 category: "Blogging Tips"
 tags: ["Entrepreneurs", "passive income", "passive income ideas", "Starting a Business", "The Power of Passive Income", "Thought Leaders"]
 ---

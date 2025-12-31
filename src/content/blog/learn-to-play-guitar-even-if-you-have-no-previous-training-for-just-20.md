@@ -1,7 +1,7 @@
 ---
 title: "Learn to Play Guitar Even if You Have No Previous Training for Just $20"
 description: "Disclosure: Our goal is to feature products and services that we think you’ll find interesting and useful."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Passive Income"
 tags: ["Guitar", "Hobbies", "Learning", "Lifestyle", "Making a Change", "Music"]
 ---
@@ -23,6 +23,6 @@ Once you’re done with the previous courses, or if you’re already at an advan
 
 It’s for just the intermediate and advanced guitar students, focusing on teaching you how to jam without needing to play a specific song. Creative guitarists can really improve their jamming and soloing skills in this class.
 
-The course also contains seven modules “…for the Curious Guitarist”. These are Fingerstyle, Ear Training, Songwriting, Guitar Lessons, Jazz, Blues and Christmas Songs.
+The course also contains seven modules “…for the Curious Guitarist�? These are Fingerstyle, Ear Training, Songwriting, Guitar Lessons, Jazz, Blues and Christmas Songs.
 
 All of the courses are presented by Dan Dresnok, who has taught guitar to tens of thousands of students online and in-person. He’s also been a performer and recording studio session guitarist, specializing in music theory, guitar, blues, jazz, rock and bluegrass.

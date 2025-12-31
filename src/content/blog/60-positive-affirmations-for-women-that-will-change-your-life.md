@@ -1,14 +1,14 @@
 ---
 title: "60 Positive Affirmations for Women That Will Change Your Life"
 description: "Positive affirmations, especially for women, can feel challenging."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Lifestyle"
 
 ---
 
-Positive affirmations, especially for women, can feel challenging. We’ve been taught to put ourselves last, prioritizing others’ happiness above our own. Perhaps we’ve even learned that to think of ourselves in a positive light is selfish or conceited. (Trust me, it’s anything but.) But many of us have heard—whether from a well-meaning friend, a therapist, or a self-help book—that practicing positive affirmations in front of the mirror can make a huge difference in our lives. And as strange or as awkward as the experience feels—it’s true.
+Positive affirmations, especially for women, can feel challenging. We’ve been taught to put ourselves last, prioritizing others�?happiness above our own. Perhaps we’ve even learned that to think of ourselves in a positive light is selfish or conceited. (Trust me, it’s anything but.) But many of us have heard—whether from a well-meaning friend, a therapist, or a self-help book—that practicing positive affirmations in front of the mirror can make a huge difference in our lives. And as strange or as awkward as the experience feels—it’s true.
 
-Behind these ideas of positive affirmations lies the science of self-affirmation theory. In essence, it asserts that when we tell (and repeat) our beliefs to ourselves, we can “maintain our sense of self-integrity.” But even with science to back it up, I’ve still felt the imposter syndrome creeping in when I try to practice positive affirmations myself.
+Behind these ideas of positive affirmations lies the science of self-affirmation theory. In essence, it asserts that when we tell (and repeat) our beliefs to ourselves, we can “maintain our sense of self-integrity.�?But even with science to back it up, I’ve still felt the imposter syndrome creeping in when I try to practice positive affirmations myself.
 
 *Featured image of Riley Reed by Jenn Rose Smith*.
 
@@ -16,11 +16,11 @@ Behind these ideas of positive affirmations lies the science of self-affirmatio
 
 ## The Importance of Practicing Positive Affirmations for Women
 
-It’s normal to experience doubt in those moments when you tell yourself something that feels deeply untrue. For example, on a day when nothing seems to be going right, your hair’s doing all sorts of funky things, and a zit decided to show up out of nowhere, it can feel inauthentic to say “I experience beauty from within.”
+It’s normal to experience doubt in those moments when you tell yourself something that feels deeply untrue. For example, on a day when nothing seems to be going right, your hair’s doing all sorts of funky things, and a zit decided to show up out of nowhere, it can feel inauthentic to say “I experience beauty from within.�?
 
 > When we practice positive affirmations daily, we not only share kind and loving words with ourselves, but we start to believe them.
 
-My advice? *Feel it!* Then take a step back, and ask yourself where those emotions are coming from. Is it a feeling of inner doubt or of comparison? Or perhaps it’s motivated by something someone said to you in the past. The point is that when we look deeper into our self-limiting beliefs, we begin to see the faults in these stories we’ve told ourselves. We see how we’ve kept ourselves from stepping into the truth of who we really are—*lovely and full of light*.
+My advice? *Feel it!* Then take a step back, and ask yourself where those emotions are coming from. Is it a feeling of inner doubt or of comparison? Or perhaps it’s motivated by something someone said to you in the past. The point is that when we look deeper into our self-limiting beliefs, we begin to see the faults in these stories we’ve told ourselves. We see how we’ve kept ourselves from stepping into the truth of who we really are�?lovely and full of light*.
 
 When we practice positive affirmations daily, we not only share kind and loving words with ourselves, but we start to believe them. While you may not experience an epiphany from any of the positive affirmations below, I will say this: with practice comes promise.
 

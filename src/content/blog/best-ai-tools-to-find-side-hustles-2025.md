@@ -1,7 +1,7 @@
 ---
 title: "Best AI Tools to Find Side Hustles in 2025 (Free Options)"
 description: "Discover free AI tools that help you find the perfect side hustle. Match your skills to real opportunities without wasting time on garbage advice."
-pubDate: "2025-12-31"
+pubDate: "2025-12-31T10:00:00"
 heroImage: "/blog-placeholder-3.jpg"
 category: "make-money-online"
 ---

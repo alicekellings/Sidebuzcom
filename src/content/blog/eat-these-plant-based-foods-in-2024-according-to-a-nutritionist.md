@@ -1,7 +1,7 @@
 ---
 title: "Eat These Plant-Based Foods in 2024, According to a Nutritionist"
 description: "What’s on this year’s menu?"
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Health"
 
 ---
@@ -26,7 +26,7 @@ Edie is the founder of nutrition coaching business, Wellness with Edie. With her
 
 ## A Plant-Forward Future
 
-At the end of December, we shared our 2024 wellness forecast. And if one thing’s for certain, it’s this: trending food predictions are plant-forward. In fact, the Mediterranean diet holds the *No. 1 Best Diet Overall—*a lifestyle that champions fruits, veggies, whole grains, beans, nuts, legumes, herbs, and spices. (Ahem, plants!) Sustainable, plant-based cooking is the future. Speaking of, as longevity goals increase, produce-forward diets will follow suit. This shift is twofold. It recognizes the importance of ethical food choices *and *the nutritional density of plants. A compassionate approach to nourishment is here to stay.
+At the end of December, we shared our 2024 wellness forecast. And if one thing’s for certain, it’s this: trending food predictions are plant-forward. In fact, the Mediterranean diet holds the *No. 1 Best Diet Overall�?a lifestyle that champions fruits, veggies, whole grains, beans, nuts, legumes, herbs, and spices. (Ahem, plants!) Sustainable, plant-based cooking is the future. Speaking of, as longevity goals increase, produce-forward diets will follow suit. This shift is twofold. It recognizes the importance of ethical food choices *and *the nutritional density of plants. A compassionate approach to nourishment is here to stay.
 
 
 ## Is veganism worth the hype?
@@ -38,14 +38,14 @@ The aim is to cultivate a feel-good, gut-friendly, and balanced approach to foo
 
 ## Can you get all the nutrients you need on a plant-based diet?
 
-Yes! Adopting a plant-based or vegan diet *can* provide all the essential nutrients required for optimal health. That said, it often necessitates careful planning and a mindful approach. Plant-based diets— rich in colorful produce, nuts, legumes, etc.—provide everything from ample protein to energizing carbs and immune-supporting antioxidants. However, certain nutrients (those abundantly found in animal products), may require special attention. Think: vitamin B12. Fortunately, that’s where fortified foods and supplements shine. With intentionality in mind, a diverse, plant-based diet can easily provide all necessary nutrients.
+Yes! Adopting a plant-based or vegan diet *can* provide all the essential nutrients required for optimal health. That said, it often necessitates careful planning and a mindful approach. Plant-based diets�?rich in colorful produce, nuts, legumes, etc.—provide everything from ample protein to energizing carbs and immune-supporting antioxidants. However, certain nutrients (those abundantly found in animal products), may require special attention. Think: vitamin B12. Fortunately, that’s where fortified foods and supplements shine. With intentionality in mind, a diverse, plant-based diet can easily provide all necessary nutrients.
 
 *Consider consulting with a healthcare professional or registered dietitian to design a balanced, plant-based diet to meet your nutritional requirements.*
 
 
 ## More Protein, Less Meat
 
-Across the board, we’re becoming savvier grocery shoppers—particularly when it comes to protein. *Hooray! *We’re inching further away from the disguises of a faux burger (with a laundry list of ingredients) and moving toward simple, non-meat protein sources. And this Whole Food Markets’ 2024 Trend Report proves it. As the year unfolds, we’ll be stocking up on protein sources made from whole foods (edamame, beans, walnuts, mushrooms, seeds, buckwheat, sprouted grains, etc.) to meet our muscle-building goals. Sayonara, complex meat alternatives.
+Across the board, we’re becoming savvier grocery shoppers—particularly when it comes to protein. *Hooray! *We’re inching further away from the disguises of a faux burger (with a laundry list of ingredients) and moving toward simple, non-meat protein sources. And this Whole Food Markets�?2024 Trend Report proves it. As the year unfolds, we’ll be stocking up on protein sources made from whole foods (edamame, beans, walnuts, mushrooms, seeds, buckwheat, sprouted grains, etc.) to meet our muscle-building goals. Sayonara, complex meat alternatives.
 
 
 ## Vegan Seafood is Making Waves
@@ -60,7 +60,7 @@ We’ve only explored the tip of the gut health iceberg, but there’s no deny
 
 ## Quiet Luxury: Food Edition
 
-The “quiet luxury” trend has its hands in the fashion industry, but it’s only a matter of time before the food world gets a bite. What will this look like? Consumers will splurge on the little things: high-quality olives, locally made vegan cheeses, and unique items to help elevate the everyday—like chili-forward spices. Below are elevated plant-based foods you don’t want to miss in 2024.
+The “quiet luxury�?trend has its hands in the fashion industry, but it’s only a matter of time before the food world gets a bite. What will this look like? Consumers will splurge on the little things: high-quality olives, locally made vegan cheeses, and unique items to help elevate the everyday—like chili-forward spices. Below are elevated plant-based foods you don’t want to miss in 2024.
 
 ### Climax Foods Cheese
 

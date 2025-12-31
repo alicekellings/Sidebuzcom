@@ -1,7 +1,7 @@
 ---
 title: "How To Make Money on Tik Tok"
 description: "Tiktok is a great platform for anyone who wants to make money on the internet."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Make Money Online"
 tags: ["make money", "social media"]
 ---
@@ -14,7 +14,7 @@ Tiktok has a massive user base and is growing every day. It’s a great platform
 
 So, you want to go viral on Tiktok. But how do you do it? Well, there are no surefire ways to make your content go viral. It’s more about creating content that will catch the right people’s attention and organically grow from there. There are, however, some things you can do to increase your chances of going viral. Here are some tips:
 
- 	- **Be original**. Don’t try to copy other Tiktok users’ content. If someone sees that someone else is already doing something similar, they won’t be interested in yours.
+ 	- **Be original**. Don’t try to copy other Tiktok users�?content. If someone sees that someone else is already doing something similar, they won’t be interested in yours.
 
  	- **Be unique**. Make sure your content is not just funny or interesting, but also unique. If you’re trying to do something that has already been done a million times before, don’t expect people to be interested in yours.
 

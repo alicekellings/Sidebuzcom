@@ -1,7 +1,7 @@
 ---
 title: "Your Complete Guide to Building Passive Income in 2024"
 description: "In a world where economic stability can seem like a distant dream, taking control of your financial future is more important than ever."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Make Money Online"
 
 ---
@@ -12,7 +12,7 @@ At its core, passive income is about making your money work for you. It’s inco
 
 ## Understanding passive income
 
-Passive income isn’t synonymous with “no effort.” It typically involves an initial investment of time, effort or capital. But once established, these income streams require much less active involvement compared to a traditional job.
+Passive income isn’t synonymous with “no effort.�?It typically involves an initial investment of time, effort or capital. But once established, these income streams require much less active involvement compared to a traditional job.
 
 You will never be truly financially free if you are working. Financial freedom means you are free to pursue anything in life without financial constraints. This is how passive income is so monumental to your financial growth. **To be financially free, you MUST have a passive income portfolio.** Over time, these streams can grow and compound. This offers you not just stability but also the opportunity for exponential wealth growth.
 
@@ -30,7 +30,7 @@ Your Financial Independence Number (FIN) is your monetary amount needed from pas
 
  	- Add a 10% buffer of the sum total (e.g. $5000 = $500)
 
- 	- Add the last two categories to create the grand total — this is your monthly FIN
+ 	- Add the last two categories to create the grand total �?this is your monthly FIN
 
 
 Use your FIN number to analyze your investment goals. It is a great starting place to build your passive income portfolio.
@@ -73,7 +73,7 @@ Starting doesn’t necessarily require a hefty financial investment. Many passiv
 
 To understand the right passive income source to begin building your portfolio, you need to know your risk tolerance. Risk tolerance refers to how much risk you can take without impacting your financial security. There are some great risk tolerance calculators online that can analyze this for you. **Make sure** you complete this step before diving in.
 
-## Accredited investing — top-tier growth
+## Accredited investing �?top-tier growth
 
 Now, just as all passive income streams are not created equal, some require you to reach specific milestones to engage with them. These streams often involve you needing to be an accredited investor. Put simply, being an accredited investor means you satisfy one of the two criteria below:
 
@@ -82,9 +82,9 @@ Now, just as all passive income streams are not created equal, some require you 
  	- You have a **net worth** exceeding $1 million, not including the value of your primary residence.
 
 
-Investments with higher returns typically require you to reach this status. This is because they are often off-market and carry higher risk compared to public investments. But just because they have higher risk, doesn’t mean the risk in itself is high — it just means it is higher than publicly available investments. Start by educating yourself on what accredited investing is, and aim towards this as your long-term investing goal.
+Investments with higher returns typically require you to reach this status. This is because they are often off-market and carry higher risk compared to public investments. But just because they have higher risk, doesn’t mean the risk in itself is high �?it just means it is higher than publicly available investments. Start by educating yourself on what accredited investing is, and aim towards this as your long-term investing goal.
 
-## Final tips — get educated
+## Final tips �?get educated
 
 Now that I’ve introduced the concept of passive income to you, and you know the basics, it’s time to learn more. There are some great resources out there that can walk you through this article in greater detail. Download an audiobook on passive income, and play it in the car on the way to work each day. A small amount of growth daily will lead to great results.
 

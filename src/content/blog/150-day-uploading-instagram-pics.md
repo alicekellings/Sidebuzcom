@@ -1,7 +1,7 @@
 ---
 title: "$150/day uploading Instagram pics"
 description: "We’re looking for people from your country to apply to this Instagram job."
-pubDate: "2025-07-01"
+pubDate: "2024-07-01"
 category: "Lifestyle"
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "10 Financial Tips For Older Than 60 Years"
 description: "As we age, our financial situation changes."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Passive Income"
 
 ---

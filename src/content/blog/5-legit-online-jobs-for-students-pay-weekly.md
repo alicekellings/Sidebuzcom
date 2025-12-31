@@ -1,7 +1,7 @@
 ---
 title: "5 Legit Online Jobs for Students That Pay Weekly (2025 Guide)"
 description: 'Stop waiting for payday. Here are 5 verified online jobs perfect for students that offer weekly payouts. Legit, tested, and flexible.'
-pubDate: '2025-01-03'
+pubDate: "2024-01-03'
 heroImage: '/blog-placeholder-4.jpg'
 category: 'make-money-online'
 tags: ['online-jobs', 'students', 'freelancing', 'weekly-pay']

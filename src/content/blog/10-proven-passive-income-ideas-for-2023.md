@@ -1,7 +1,7 @@
 ---
 title: "10 Proven Passive Income Ideas for 2023"
 description: "There are many ways to generate passive income and change your financial future."
-pubDate: "2025-04-13"
+pubDate: "2024-04-13"
 category: "affiliate marketing"
 tags: ["affiliate marketing", "Books", "Ebooks", "Online Business", "passive income", "SaaS", "Side Hustle", "Starting a Business", "YouTube"]
 ---
@@ -120,7 +120,7 @@ With this, you can earn high passive income through downloads, subscriptions, ad
 
 Selling eBooks online is a very accessible method of making passive income.
 
-The idea of creating a whole digital “book” might still sound intimidating to you, but I promise it’s actually simple to do.
+The idea of creating a whole digital “book�?might still sound intimidating to you, but I promise it’s actually simple to do.
 
 Your book’s content can be informative or entertaining, and it can be as short and simple as a 5-page PDF.
 

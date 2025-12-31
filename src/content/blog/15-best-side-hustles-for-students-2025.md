@@ -1,7 +1,7 @@
 ---
 title: "15 Best Side Hustles for Students in 2025 (That Actually Pay)"
 description: "Discover 15 proven side hustles for students in 2025. Real options that fit around classes, no experience needed, and actually worth your time."
-pubDate: "2025-12-31"
+pubDate: "2025-12-31T12:00:00"
 heroImage: "/blog-placeholder-1.jpg"
 category: "side-hustle"
 ---

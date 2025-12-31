@@ -1,7 +1,7 @@
 ---
 title: "Manchester United midfielder Bruno Fernandes reacts to Chelsea target’s goal with Sonic the Hedgehog reference"
 description: "Manchester United superstar Bruno Fernandes has likened Chelsea-linked AC Milan forward Rafael Leao to Sonic the Hedgehog following his goal against Salernit..."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Sports"
 tags: ["Bruno Fernandes", "Chelsea", "Chelsea Transfer News", "EPL 2022-23", "Football", "Manchester United", "Manchester United Fixtures", "News", "Rafael Leão"]
 ---

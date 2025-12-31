@@ -1,7 +1,7 @@
 ---
 title: "Cozy and Elegant Winter Basics to Wear All Season Long"
 description: "The holidays have been here for a minute, and if you aren’t already in the midst of festive mayhem, then I’m sure it’s about to sneak up on you."
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "Lifestyle"
 tags: ["Beauty"]
 ---
@@ -12,7 +12,7 @@ The holidays have been here for a minute, and if you aren’t already in the m
 
 ## The Best Cozy and Elegant Winter Basics
 
-Our winter basics are those you continue to go back to on a seasonal basis. And sure, in a world of “core” after “core” trend, the idea of finding a timeless piece can feel like a needle-in-a-haystack situation. But don’t worry, no matter the occasion you’re dressing for, these winter basics have you covered.
+Our winter basics are those you continue to go back to on a seasonal basis. And sure, in a world of “core�?after “core�?trend, the idea of finding a timeless piece can feel like a needle-in-a-haystack situation. But don’t worry, no matter the occasion you’re dressing for, these winter basics have you covered.
 
 *Every product is curated with care by our editors and we’ll always give an honest opinion, whether gifted or purchased ourselves. If you buy something through our links, we may earn a small commission at no cost to you.*
 
@@ -27,7 +27,7 @@ The trick to selecting a timeless blazer is opting for one that moves with the s
 
 ### The Tailored Pant
 
-IYKYK: Quince’s ultra-stretch ponte pant is a study in blending comfort with style. And because the brand is known for offering quality pieces at an accessible price, you’re welcome to select as many colors as you’d like (the burgundy and olive are my other two faves). But as far as pants that do *everything* for you—nothing beats Cartolina’s Hallie Pant. I’m wearing the “saddle” colorway above, and I can say with certainty: I’ve never loved a pant more. The high rise and elongating slim leg is beyond flattering—and yes, they do feel like yoga pants. (Tip: these run big, you’ll want to size down.) Your wardrobe of winter basics isn’t complete without them.
+IYKYK: Quince’s ultra-stretch ponte pant is a study in blending comfort with style. And because the brand is known for offering quality pieces at an accessible price, you’re welcome to select as many colors as you’d like (the burgundy and olive are my other two faves). But as far as pants that do *everything* for you—nothing beats Cartolina’s Hallie Pant. I’m wearing the “saddle�?colorway above, and I can say with certainty: I’ve never loved a pant more. The high rise and elongating slim leg is beyond flattering—and yes, they do feel like yoga pants. (Tip: these run big, you’ll want to size down.) Your wardrobe of winter basics isn’t complete without them.
 
 ### The Understated Statement Necklace
 

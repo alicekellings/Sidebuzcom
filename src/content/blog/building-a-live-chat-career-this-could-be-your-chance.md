@@ -1,7 +1,7 @@
 ---
 title: "Building a Live Chat Career? This could be your chance!"
 description: "With the introduction of Direct Messages, TikTok allows businesses to interact more personally with their customers."
-pubDate: "2025-07-01"
+pubDate: "2024-07-01"
 category: "Blog"
 
 ---

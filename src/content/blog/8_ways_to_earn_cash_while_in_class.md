@@ -1,7 +1,7 @@
 ---
 title: "8 Ways to Earn Cash While in Class"
 description: "I remember back in my college days, constantly eyeing that cool new gadget in the store window but having zero cash to spare."
-pubDate: "2025-04-19"
+pubDate: "2024-04-19"
 category: "Passive Income"
 
 ---
@@ -65,7 +65,7 @@ These ways not only help you make some much - needed money but also give you val
 ### Common Challenges and Solutions
 
 
-You know, just like I was stuck in that college bind with no money and too little time, many students today face similar uphill battles. One of the most common challenges is managing finances while juggling a busy academic schedule. It's like trying to ride a unicycle on a tightrope â€“ one wrong move and you could end up in a financial free - fall.
+You know, just like I was stuck in that college bind with no money and too little time, many students today face similar uphill battles. One of the most common challenges is managing finances while juggling a busy academic schedule. It's like trying to ride a unicycle on a tightrope â€?one wrong move and you could end up in a financial free - fall.
 
 
 Let's look at a real - world example from SEMrush. A student named Emily was in a similar fix. She had a part - time job but still couldn't make ends meet. She was spending an average of $300 a month on food delivery because she was too busy with classes and projects to cook. Using SEMrush, she analyzed her spending patterns and found that by switching to meal prepping, she could cut her monthly food expenses by 50%. This allowed her to save an extra $150 per month. (Imagine the relief of seeing your savings grow and feeling more in control of your finances!)

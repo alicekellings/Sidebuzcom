@@ -1,7 +1,7 @@
 ---
 title: "How I Found My First Side Hustle as a Broke Freshman (What Actually Worked)"
 description: "A real story about finding your first student side hustle. What failed, what worked, and how to skip the trial-and-error phase."
-pubDate: "2025-12-28"
+pubDate: "2024-12-28"
 heroImage: "/blog-placeholder-2.jpg"
 category: "make-money-online"
 ---

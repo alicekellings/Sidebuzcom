@@ -1,7 +1,7 @@
 ---
 title: "14 Gluten-Free Dairy-Free Desserts That Everyone Can Enjoy"
 description: "From cookies to brownies to homemade ice cream, we’ve rounded up our favorite gluten-free, dairy-free dessert recipes that are easy, elegant, and truly crave..."
-pubDate: "2025-04-11"
+pubDate: "2024-04-11"
 category: "Cooking"
 
 ---
@@ -30,7 +30,7 @@ From cookies to brownies to homemade ice cream, we’ve rounded up our favorite 
 
 ![](https://camillestyles.com/wp-content/uploads/2023/04/gluten-free-vegan-carrot-cake-cupcakes-1.jpeg)
 
-**Why We Love It: **Good old-fashioned carrot cake gets a revamp in the form of gluten-free, vegan cupcakes. They’re one of those “cleaned up classics” that you can’t go wrong with. They retain all the flavor and texture of carrot cake—perfectly moist, sweet, and bursting with spiced goodness. These cupcakes are another dessert to make and pack away for your friends, family, or anyone in your circle who could use a pick-me-up.
+**Why We Love It: **Good old-fashioned carrot cake gets a revamp in the form of gluten-free, vegan cupcakes. They’re one of those “cleaned up classics�?that you can’t go wrong with. They retain all the flavor and texture of carrot cake—perfectly moist, sweet, and bursting with spiced goodness. These cupcakes are another dessert to make and pack away for your friends, family, or anyone in your circle who could use a pick-me-up.
 
 **Hero Ingredient: **To give your cupcakes extra pizazz, grate some walnuts over top of the icing and sprinkle with a dash of cinnamon. It’s the little things.
 
@@ -54,7 +54,7 @@ From cookies to brownies to homemade ice cream, we’ve rounded up our favorite 
 
 **Why We Love It: **If you haven’t jumped on the grilled peach bandwagon yet, this is your sign. Grilled peaches maintain all of their juicy sweetness and are made even better by the bitter grill marks that grace the edges. The best part? They only require four ingredients: peaches, olive oil, salt, and honey. If it suits your fancy, a scoop of dairy-free vanilla ice cream brings a creamy coolness to the mix that’s simply mouthwatering. Grill those peaches, people!
 
-**Hero Ingredient: **Fresh basil or mint is a great addition. The herbs’ floral freshness elevates those peaches to new heights.
+**Hero Ingredient: **Fresh basil or mint is a great addition. The herbs�?floral freshness elevates those peaches to new heights.
 
 ![](https://camillestyles.com/wp-content/uploads/2023/04/no-churn-mango-basil-ice-cream.jpeg)
 
@@ -64,7 +64,7 @@ From cookies to brownies to homemade ice cream, we’ve rounded up our favorite 
 
 ![Vegan + Gluten-free Chocolate Chip Cookies ](https://camillestyles.com/wp-content/uploads/2023/04/vegan-gluten-free-chocolate-chip-cookies-768x960.jpeg)
 
-**Why We Love It: **Vegan and gluten-free chocolate chip cookies that taste great *and* are better for you? Sign me up. These tasty treats boast oats, walnuts, cinnamon, sea salt, almond butter, chia seeds, and so much more goodness. They’re moist (sorry), chewy, and totally delicious. These cookies are also great for wrapping up and gifting to a friend or packing in your kiddos’ lunch boxes.
+**Why We Love It: **Vegan and gluten-free chocolate chip cookies that taste great *and* are better for you? Sign me up. These tasty treats boast oats, walnuts, cinnamon, sea salt, almond butter, chia seeds, and so much more goodness. They’re moist (sorry), chewy, and totally delicious. These cookies are also great for wrapping up and gifting to a friend or packing in your kiddos�?lunch boxes.
 
 **Hero Ingredient: **Pro tip: Though the recipe doesn’t call for it, toasting your walnuts beforehand brings an extra nuttiness to the cookie that’s just divine.
 

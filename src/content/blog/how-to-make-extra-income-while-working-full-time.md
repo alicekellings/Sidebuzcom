@@ -1,12 +1,12 @@
 ---
 title: "How to Make Extra Income While Working Full Time"
 description: "Is your dwindling bank account impacting your health?"
-pubDate: "2025-04-12"
+pubDate: "2024-04-12"
 category: "affiliate marketing"
 tags: ["Income Growth", "money", "Money &amp; Finance", "passive income", "Side Hustle", "Starting a Business"]
 ---
 
-Is your dwindling bank account impacting your health? The American Psychological Association (APA) released a survey showing that money stress impacts Americans’ health nationwide. And, as it turns out, the wealthy are also stressed about money — not just those in lower-income households.
+Is your dwindling bank account impacting your health? The American Psychological Association (APA) released a survey showing that money stress impacts Americans�?health nationwide. And, as it turns out, the wealthy are also stressed about money — not just those in lower-income households.
 
 You can eliminate some of that financial stress by earning additional income, even if you have a full-time job. Steve Chou of MyWifeQuitHerJob famously started two six-figure businesses while continuing to work at his day job.
 
