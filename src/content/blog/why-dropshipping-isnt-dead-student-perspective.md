@@ -1,7 +1,7 @@
 ---
 title: "Why Dropshipping isn't Dead: A Software Engineering Student's Perspective"
 description: "Is dropshipping saturated in 2025? I analyzed the data. Here is why the model has changed, and how students can still build a profitable store without a huge budget."
-pubDate: "2024-01-04'
+pubDate: "2024-01-04"
 heroImage: '/blog-placeholder-3.jpg'
 category: 'business'
 tags: ['dropshipping', 'ecommerce', 'passive-income', 'student-business']
